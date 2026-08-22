@@ -17,6 +17,17 @@
   background:linear-gradient(110deg,#22364a,#3a5269);
   border-bottom:1px solid rgba(212,182,110,.55);
 }
+.portrait-slot {
+    overflow: hidden;
+}
+
+.portrait-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
 .floating-route-head small{display:block;margin-bottom:4px;color:#d4b66e;font:600 8px "Cinzel",serif;letter-spacing:.16em}
 .floating-route-head strong{font-size:13px;letter-spacing:.04em}
 .route-collapse{width:30px;height:30px;border:1px solid rgba(212,182,110,.55);background:rgba(255,255,255,.07);color:#e5ca87;font-size:20px;cursor:pointer}
