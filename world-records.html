@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>세계의 기록 | 영웅들의 서사시 I</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="world-page">
+  <header class="records-topbar">
+    <a class="mini-brand" href="index.html">
+      <span class="mini-crest">◇</span>
+      <span>
+        <small>EPIC OF HEROES · I</small>
+        <strong>세계의 기록</strong>
+      </span>
+    </a>
+    <a class="top-back" href="index.html">← 로비</a>
+  </header>
+
+  <main class="world-shell">
+    <section class="world-hero">
+      <p class="series">WORLD ARCHIVE</p>
+      <h1>세계의 기록</h1>
+      <p>왕국의 역사와 도시, 세력, 길드, 위험 지역, 그리고 오늘도 새로 붙는 의뢰와 수배서를 기록하는 아카이브.</p>
+
+      <div class="world-summary">
+        <div><span>왕국</span><strong>4</strong></div>
+        <div><span>주요 도시</span><strong>9</strong></div>
+        <div><span>길드·세력</span><strong>12</strong></div>
+        <div><span>미확인 위험지</span><strong>7</strong></div>
+      </div>
+    </section>
+
+    <section class="world-panel">
+      <div class="world-tabs" role="tablist">
+        <button class="world-tab active" data-world-tab="places">장소·지역</button>
+        <button class="world-tab" data-world-tab="map">세계 지도</button>
+        <button class="world-tab" data-world-tab="factions">왕국·세력</button>
+        <button class="world-tab" data-world-tab="guilds">길드·귀족가</button>
+        <button class="world-tab" data-world-tab="economy">골드·아이템</button>
+        <button class="world-tab" data-world-tab="quests">오늘의 의뢰</button>
+        <button class="world-tab" data-world-tab="wanted">현상수배범</button>
+        <button class="world-tab" data-world-tab="monsters">몬스터 도감</button>
+        <button class="world-tab" data-world-tab="rumors">소문·생활 기록</button>
+      </div>
+
+      <div class="world-content active" id="places">
+        <div class="world-section-head">
+          <span class="eyebrow">PLACES & REGIONS</span>
+          <h2>주요 장소와 지역</h2>
+          <p>여행자와 용병, 기사들이 자주 오가는 핵심 지역을 우선 기록합니다.</p>
+        </div>
+        <div class="lore-grid">
+          <article class="lore-card featured">
+            <div class="lore-icon">🏰</div>
+            <div class="lore-copy">
+              <span class="lore-type">왕도</span>
+              <h3>아르카디움</h3>
+              <p>왕국 정치와 상업의 중심지. 중앙 성채와 귀족 지구, 대성당, 영웅광장이 한데 모여 있다.</p>
+              <div class="lore-meta"><span>안전도 A</span><span>상업도 S</span><span>왕실 직할</span></div>
+            </div>
+          </article>
+          <article class="lore-card">
+            <div class="lore-icon">⛰️</div>
+            <div class="lore-copy">
+              <span class="lore-type">산악 요새</span>
+              <h3>철관문 카르도르</h3>
+              <p>북부 산맥을 가로지르는 거대한 요새. 철기병과 방패병들이 주둔하며, 국경 수비의 핵심이다.</p>
+              <div class="lore-meta"><span>안전도 B</span><span>군사도 S</span></div>
+            </div>
+          </article>
+          <article class="lore-card">
+            <div class="lore-icon">🌲</div>
+            <div class="lore-copy">
+              <span class="lore-type">숲</span>
+              <h3>루멘 숲</h3>
+              <p>정령과 영수가 자주 목격되는 고대의 숲. 토템전사와 기공사들이 수행지로 삼는다.</p>
+              <div class="lore-meta"><span>위험도 B</span><span>정령 친화</span></div>
+            </div>
+          </article>
+          <article class="lore-card">
+            <div class="lore-icon">🌋</div>
+            <div class="lore-copy">
+              <span class="lore-type">금지구역</span>
+              <h3>적철 분화구</h3>
+              <p>대전쟁 때 생긴 거대한 분화구. 희귀 광물이 많지만 광폭화한 마수와 잔류 마력이 뒤엉켜 있다.</p>
+              <div class="lore-meta"><span>위험도 S</span><span>출입 허가 필요</span></div>
+            </div>
+          </article>
+          <article class="lore-card">
+            <div class="lore-icon">⚓</div>
+            <div class="lore-copy">
+              <span class="lore-type">항구도시</span>
+              <h3>벨로스 항</h3>
+              <p>용병과 상단, 밀수업자가 뒤섞이는 서부 최대 항구. 값싼 장비와 희귀 물품을 모두 구할 수 있다.</p>
+              <div class="lore-meta"><span>안전도 C</span><span>상업도 A</span></div>
+            </div>
+          </article>
+          <article class="lore-card">
+            <div class="lore-icon">🕯️</div>
+            <div class="lore-copy">
+              <span class="lore-type">유적</span>
+              <h3>영웅들의 묘역</h3>
+              <p>역대 영웅들의 기록과 유물이 봉인된 성역. 최근 악의 기운에 오염되었다는 보고가 있다.</p>
+              <div class="lore-meta"><span>위험도 ???</span><span>왕실 봉쇄</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      
+      <div class="world-content" id="map">
+        <div class="world-section-head">
+          <span class="eyebrow">INTERACTIVE WORLD MAP</span>
+          <h2>세계 지도</h2>
+          <p>지도를 드래그해서 이동하고 원하는 지점을 더블클릭하면 색상 핀을 남길 수 있습니다. 핀은 브라우저에 자동 저장됩니다.</p>
+        </div>
+
+        <div class="map-toolbar">
+          <div class="map-help">
+            <span>✥ 드래그: 지도 이동</span>
+            <span>✦ 더블클릭: 핀 추가</span>
+            <span>⌫ 핀 클릭: 이름 수정 / 삭제</span>
+          </div>
+          <div class="pin-colors" aria-label="핀 색상 선택">
+            <span>핀 색상</span>
+            <button class="pin-color active" data-pin-color="#a94d4d" style="--pin:#a94d4d" aria-label="붉은 핀"></button>
+            <button class="pin-color" data-pin-color="#416a8a" style="--pin:#416a8a" aria-label="푸른 핀"></button>
+            <button class="pin-color" data-pin-color="#5f7a52" style="--pin:#5f7a52" aria-label="초록 핀"></button>
+            <button class="pin-color" data-pin-color="#9a7740" style="--pin:#9a7740" aria-label="금색 핀"></button>
+            <button class="pin-color" data-pin-color="#6f587e" style="--pin:#6f587e" aria-label="보라 핀"></button>
+          </div>
+          <button type="button" class="map-reset" id="resetMap">지도 위치 초기화</button>
+        </div>
+
+        <div class="world-map-viewport" id="mapViewport">
+          <div class="world-map-canvas" id="mapCanvas">
+            <svg class="fantasy-map" viewBox="0 0 1600 1000" xmlns="http://www.w3.org/2000/svg" aria-label="영웅들의 서사시 세계 지도">
+              <defs>
+                <filter id="paperNoise">
+                  <feTurbulence type="fractalNoise" baseFrequency=".012" numOctaves="3" seed="8"/>
+                  <feColorMatrix type="saturate" values="0"/>
+                  <feComponentTransfer><feFuncA type="table" tableValues="0 .09"/></feComponentTransfer>
+                </filter>
+                <filter id="softShadow"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-opacity=".16"/></filter>
+                <linearGradient id="sea" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#dfe8e5"/><stop offset="1" stop-color="#cbd9d4"/>
+                </linearGradient>
+                <linearGradient id="land" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#eee4c9"/><stop offset="1" stop-color="#dacba7"/>
+                </linearGradient>
+              </defs>
+              <rect width="1600" height="1000" fill="url(#sea)"/>
+              <rect width="1600" height="1000" filter="url(#paperNoise)"/>
+              <path d="M210,180 C330,85 515,96 640,145 C745,188 782,268 884,283 C1000,300 1091,227 1250,255 C1370,277 1455,370 1418,470 C1380,570 1285,582 1245,671 C1198,775 1075,842 938,805 C820,774 756,860 617,840 C480,818 388,740 340,650 C295,567 188,527 156,427 C126,332 143,236 210,180Z" fill="url(#land)" stroke="#9d8960" stroke-width="5" filter="url(#softShadow)"/>
+              <g fill="#9d947d" stroke="#766d59" stroke-width="2" opacity=".86">
+                <path d="M310 280 l45-95 48 95z"/><path d="M375 286 l58-120 62 120z"/><path d="M455 290 l48-97 52 97z"/><path d="M535 300 l62-126 70 126z"/>
+                <path d="M1180 400 l42-84 46 84z"/><path d="M1240 412 l58-118 65 118z"/>
+              </g>
+              <g fill="#708068" opacity=".82">
+                <circle cx="480" cy="510" r="28"/><circle cx="520" cy="500" r="32"/><circle cx="555" cy="525" r="29"/><circle cx="510" cy="545" r="34"/><circle cx="575" cy="560" r="27"/><circle cx="615" cy="535" r="30"/>
+                <circle cx="1040" cy="620" r="28"/><circle cx="1080" cy="600" r="34"/><circle cx="1125" cy="625" r="31"/>
+              </g>
+              <path d="M650 220 C690 350 770 385 760 505 C748 630 870 685 845 810" fill="none" stroke="#7ea1aa" stroke-width="15" opacity=".8"/>
+              <path d="M760 505 C870 470 935 445 1050 440" fill="none" stroke="#7ea1aa" stroke-width="9" opacity=".75"/>
+              <g fill="none" stroke="#aa9270" stroke-width="5" stroke-dasharray="10 10" opacity=".72">
+                <path d="M745 455 C650 430 590 380 520 335"/><path d="M745 455 C910 470 1030 425 1195 425"/><path d="M745 455 C800 585 790 690 760 755"/><path d="M745 455 C650 565 565 640 405 690"/>
+              </g>
+              <g font-family="serif" text-anchor="middle">
+                <g transform="translate(745 430)"><circle r="18" fill="#2f4559" stroke="#c3a260" stroke-width="5"/><text y="50" font-size="26" fill="#384554" font-weight="700">아르카디움</text><text y="75" font-size="16" fill="#776d5b">왕도</text></g>
+                <g transform="translate(515 320)"><rect x="-18" y="-18" width="36" height="36" fill="#53616c" stroke="#c3a260" stroke-width="4"/><text y="52" font-size="23" fill="#384554" font-weight="700">철관문 카르도르</text></g>
+                <g transform="translate(535 545)"><circle r="15" fill="#62735c" stroke="#ede1b5" stroke-width="4"/><text y="53" font-size="23" fill="#384554" font-weight="700">루멘 숲</text></g>
+                <g transform="translate(1200 440)"><path d="M0 -24 L22 20 L-22 20Z" fill="#8d5b4d" stroke="#e0c897" stroke-width="4"/><text y="58" font-size="23" fill="#384554" font-weight="700">적철 분화구</text></g>
+                <g transform="translate(400 700)"><circle r="17" fill="#557382" stroke="#e0c897" stroke-width="4"/><text y="52" font-size="23" fill="#384554" font-weight="700">벨로스 항</text></g>
+                <g transform="translate(1010 720)"><path d="M0 -23 L18 15 L0 8 L-18 15Z" fill="#665e70" stroke="#e0c897" stroke-width="4"/><text y="54" font-size="23" fill="#384554" font-weight="700">영웅들의 묘역</text></g>
+              </g>
+            </svg>
+            <div class="user-pins" id="userPins"></div>
+          </div>
+        </div>
+
+        <div class="map-pin-legend">
+          <span><i style="--legend:#a94d4d"></i>위험/적대</span>
+          <span><i style="--legend:#416a8a"></i>장소/탐험</span>
+          <span><i style="--legend:#5f7a52"></i>자원/채집</span>
+          <span><i style="--legend:#9a7740"></i>의뢰/목표</span>
+          <span><i style="--legend:#6f587e"></i>개인 메모</span>
+        </div>
+      </div>
+
+      <div class="world-content" id="factions">
+        <div class="world-section-head">
+          <span class="eyebrow">KINGDOMS & FACTIONS</span>
+          <h2>왕국과 주요 세력</h2>
+          <p>세력 간의 동맹과 갈등은 전직 퀘스트, 거래 가격, 출입 권한에도 영향을 줍니다.</p>
+        </div>
+        <div class="faction-list">
+          <article class="faction-row">
+            <div class="faction-seal">♔</div>
+            <div><span>중앙 왕국</span><h3>아르카디아 왕국</h3><p>기사와 길드 체계가 가장 발달한 국가. 플레이어가 처음으로 공식 영웅 후보로 등록되는 곳.</p></div>
+            <div class="relation friendly">우호</div>
+          </article>
+          <article class="faction-row">
+            <div class="faction-seal">⚒</div>
+            <div><span>북부 연합</span><h3>드라켄 변경령</h3><p>광산과 요새를 중심으로 성장한 군사국가. 거인과 드래곤의 침공에 늘 대비하고 있다.</p></div>
+            <div class="relation neutral">중립</div>
+          </article>
+          <article class="faction-row">
+            <div class="faction-seal">☼</div>
+            <div><span>성역 국가</span><h3>솔라리스 교국</h3><p>성기사와 성직자들의 본거지. 타락한 영웅의 구원을 둘러싸고 왕국과 의견이 갈린다.</p></div>
+            <div class="relation friendly">우호</div>
+          </article>
+          <article class="faction-row">
+            <div class="faction-seal">☾</div>
+            <div><span>비공식 세력</span><h3>검은 장막</h3><p>암시장과 정보망을 장악한 조직. 흑기사와 마검사 루트에서 비밀 의뢰를 제공한다.</p></div>
+            <div class="relation hostile">경계</div>
+          </article>
+        </div>
+      </div>
+
+      <div class="world-content" id="guilds">
+        <div class="world-section-head">
+          <span class="eyebrow">GUILDS & NOBLE HOUSES</span>
+          <h2>길드와 귀족가</h2>
+          <p>플레이어가 직접 의뢰를 받거나 후원을 얻고, 때로는 정치적 선택을 하게 되는 조직들.</p>
+        </div>
+        <div class="lore-grid compact">
+          <article class="lore-card"><div class="lore-icon">⚔️</div><div class="lore-copy"><span class="lore-type">모험가 길드</span><h3>백은의 깃털</h3><p>가장 규모가 큰 공식 길드. 초급 의뢰부터 왕실 토벌까지 폭넓게 중개한다.</p></div></article>
+          <article class="lore-card"><div class="lore-icon">🛡️</div><div class="lore-copy"><span class="lore-type">용병단</span><h3>철혈 맹약단</h3><p>실전 경험을 중시하는 용병 집단. 야전병·전술가 계열과 깊은 관계가 있다.</p></div></article>
+          <article class="lore-card"><div class="lore-icon">👑</div><div class="lore-copy"><span class="lore-type">대귀족가</span><h3>에델하르트 공작가</h3><p>왕실 친위대 다수를 배출한 명문가. 정치적 영향력이 매우 크다.</p></div></article>
+          <article class="lore-card"><div class="lore-icon">🌹</div><div class="lore-copy"><span class="lore-type">귀족 저택</span><h3>로제트 후작저</h3><p>사교회와 정보 교류가 활발한 장소. 겉보기와 달리 비밀 통로가 많다는 소문이 있다.</p></div></article>
+          <article class="lore-card"><div class="lore-icon">📚</div><div class="lore-copy"><span class="lore-type">학술 길드</span><h3>아르카나 기록원</h3><p>룬, 고대 영웅, 유적 기록을 보관한다. 마검사 전직에 필요한 문헌이 잠들어 있다.</p></div></article>
+          <article class="lore-card"><div class="lore-icon">🐉</div><div class="lore-copy"><span class="lore-type">기사단</span><h3>청린 용기병단</h3><p>드래곤과 와이번을 다루는 극소수의 기사단. 외부인은 거의 받지 않는다.</p></div></article>
+        </div>
+<div class="organization-board">
+  <div class="world-section-head board-subhead"><span class="eyebrow">PUBLIC NOTICES</span><h2>단체별 공고 게시판</h2>
+  <p>길드, 기사단, 귀족가에서 직접 올린 공개·기밀 공고입니다.</p></div>
+  <div class="notice-grid">
+    <article class="notice-card"><span class="notice-org">백은의 깃털</span><h3>신입 모험가 정기 모집</h3><p>초급 토벌·호위 의뢰를 수행할 신규 모험가 모집. 장비 대여 가능.</p><small>지원 조건: Lv.5+ / 범죄기록 없음</small></article>
+    <article class="notice-card"><span class="notice-org">청린 용기병단</span><h3>와이번 관리 보조 인력</h3><p>비행장 정비와 와이번 사육 보조. 큰 소리에 약한 자는 지원 금지.</p><small>우대: 창술·기마 적성</small></article>
+    <article class="notice-card"><span class="notice-org">에델하르트 공작가</span><h3>귀족 호위기사 단기 채용</h3><p>왕도 사교회 기간 중 공작가 인사 호위. 품행과 예절을 엄격히 심사.</p><small>보수: 90G / 3일</small></article>
+    <article class="notice-card"><span class="notice-org">철혈 맹약단</span><h3>북부 수송대 전투원 모집</h3><p>적설 지대를 통과하는 군수품 수송. 몬스터 조우 가능성이 높음.</p><small>위험수당 별도</small></article>
+    <article class="notice-card suspicious"><span class="notice-org">발신인 미상</span><h3>“붉은 달이 뜨는 밤, 문을 세 번 두드릴 것.”</h3><p>지원 자격과 보수는 기재되어 있지 않다. 종이에서 희미한 마력 반응이 느껴진다.</p><small>접촉 장소: 벨로스 항 7번 창고</small></article>
+    <article class="notice-card classified" id="classifiedNotice">
+      <div class="classified-cover"><span>CLASSIFIED</span><h3>왕실 비인가 기밀 공고</h3><p>암호문을 입력해야 내용을 열람할 수 있습니다.</p>
+      <div class="classified-unlock"><input id="classifiedCode" type="password" placeholder="암호문 입력"><button id="unlockClassified" type="button">열람</button></div>
+      <small id="classifiedStatus">힌트: 영웅의 시작점</small></div>
+      <div class="classified-body"><span class="notice-org">████████</span><h3>영웅들의 묘역 잠입 인원 모집</h3><p>공식 기록에 존재하지 않는 의뢰다. 묘역 내부의 검은 결정체를 회수하고 누구에게도 발설하지 말 것.</p><small>보수: 2,500G + 미공개 유물</small></div>
+    </article>
+  </div>
+</div>
+
+      </div>
+
+      
+<div class="world-content" id="economy">
+  <div class="world-section-head"><span class="eyebrow">GOLD & MARKET INDEX</span><h2>골드 물가와 아이템</h2>
+  <p>기준 물가와 아이템 가격을 검색할 수 있습니다. 지역과 CHA에 따라 실제 거래가는 달라질 수 있습니다.</p></div>
+  <div class="economy-rules-grid">
+    <div><span>일반 성인 일당</span><strong>5~10 G</strong></div><div><span>변방·오지</span><strong>+20~30%</strong></div>
+    <div><span>상인 길드 지역</span><strong>-10%</strong></div><div><span>판매 환급</span><strong>구매가 × 40%</strong></div>
+  </div>
+  <div class="economy-searchbar">
+    <input id="economySearch" type="search" placeholder="아이템명, 분류, 설명, 효과 검색">
+    <select id="economyCategory"><option value="all">전체 분류</option><option value="equipment">장비</option><option value="consumable">소모품·음식</option><option value="service">서비스·기타</option><option value="material">재료·소재</option></select>
+    <span id="economyCount"></span>
+  </div>
+  <div class="economy-table-wrap"><table class="economy-table" id="economyTable">
+  <thead><tr><th>분류</th><th>등급</th><th>이름</th><th>설명 / 효과 / 용도</th><th>가격</th><th>비고</th></tr></thead><tbody><tr data-cat="equipment"><td>장비</td><td>일반</td><td>낡은 검</td><td>기본 지급 수준</td><td>10G</td><td>상점</td></tr>
+<tr data-cat="equipment"><td>장비</td><td>일반</td><td>가죽 갑옷</td><td>최소한의 방어</td><td>15G</td><td>상점</td></tr>
+<tr data-cat="equipment"><td>장비</td><td>일반</td><td>나무 방패</td><td>가벼운 방어구</td><td>8G</td><td>상점</td></tr>
+<tr data-cat="equipment"><td>장비</td><td>고급</td><td>철제 검</td><td>균형 잡힌 무기</td><td>80G</td><td>상점</td></tr>
+<tr data-cat="equipment"><td>장비</td><td>고급</td><td>철제 갑옷</td><td>안정적인 방어</td><td>120G</td><td>상점</td></tr>
+<tr data-cat="equipment"><td>장비</td><td>고급</td><td>철제 방패</td><td>견고한 방어구</td><td>60G</td><td>상점</td></tr>
+<tr data-cat="equipment"><td>장비</td><td>희귀</td><td>강철 대검</td><td>높은 STR 요구</td><td>300G</td><td>특수 거래</td></tr>
+<tr data-cat="equipment"><td>장비</td><td>희귀</td><td>미스릴 단검</td><td>DEX 특화</td><td>250G</td><td>특수 거래</td></tr>
+<tr data-cat="equipment"><td>장비</td><td>희귀</td><td>룬 지팡이</td><td>INT 특화</td><td>280G</td><td>특수 거래</td></tr>
+<tr data-cat="equipment"><td>장비</td><td>영웅</td><td>영웅의 검</td><td>전설급 전조</td><td>1,200G</td><td>경매·드롭</td></tr>
+<tr data-cat="equipment"><td>장비</td><td>영웅</td><td>드래곤스케일 갑옷</td><td>최고급 방어구</td><td>2,000G</td><td>경매·드롭</td></tr>
+<tr data-cat="consumable"><td>소모품</td><td>회복</td><td>작은 포션</td><td>HP +30</td><td>5G</td><td>상점</td></tr>
+<tr data-cat="consumable"><td>소모품</td><td>회복</td><td>중형 포션</td><td>HP +80</td><td>15G</td><td>상점</td></tr>
+<tr data-cat="consumable"><td>소모품</td><td>회복</td><td>대형 포션</td><td>HP +200</td><td>40G</td><td>상점</td></tr>
+<tr data-cat="consumable"><td>소모품</td><td>회복</td><td>마나 포션</td><td>MP +50</td><td>10G</td><td>상점</td></tr>
+<tr data-cat="consumable"><td>소모품</td><td>회복</td><td>엘릭서</td><td>HP+MP 완전 회복</td><td>200G</td><td>고급 상점</td></tr>
+<tr data-cat="consumable"><td>음식</td><td>음식</td><td>빵 한 덩이</td><td>HP +10 / 포만감</td><td>1G</td><td>일반</td></tr>
+<tr data-cat="consumable"><td>음식</td><td>음식</td><td>고기 구이</td><td>HP +25 / STR+1 (1전투)</td><td>4G</td><td>일반</td></tr>
+<tr data-cat="consumable"><td>음식</td><td>음식</td><td>야채 수프</td><td>HP +20 / VIT+1 (1전투)</td><td>3G</td><td>일반</td></tr>
+<tr data-cat="consumable"><td>음식</td><td>음식</td><td>모험가 도시락</td><td>HP+40 / STA 완전 회복</td><td>8G</td><td>길드 인기품</td></tr>
+<tr data-cat="consumable"><td>음식</td><td>음식</td><td>마법사의 차</td><td>MP+30 / WIS+1 (1전투)</td><td>6G</td><td>마법사 길드</td></tr>
+<tr data-cat="consumable"><td>소모품</td><td>특수</td><td>스태미나 드링크</td><td>STA 완전 회복</td><td>12G</td><td>상점</td></tr>
+<tr data-cat="consumable"><td>소모품</td><td>특수</td><td>해독제</td><td>독 상태 해제</td><td>8G</td><td>상점</td></tr>
+<tr data-cat="consumable"><td>소모품</td><td>특수</td><td>각성제</td><td>수면·혼란 해제</td><td>10G</td><td>상점</td></tr>
+<tr data-cat="service"><td>서비스</td><td>숙박</td><td>여관 (일반실)</td><td>기본 숙박</td><td>3G/박</td><td>도시</td></tr>
+<tr data-cat="service"><td>서비스</td><td>숙박</td><td>여관 (개인실)</td><td>개인 숙박</td><td>8G/박</td><td>도시</td></tr>
+<tr data-cat="service"><td>서비스</td><td>숙박</td><td>고급 숙소</td><td>귀족급 숙박</td><td>30G/박</td><td>왕도</td></tr>
+<tr data-cat="service"><td>서비스</td><td>이동</td><td>마차 탑승 (단거리)</td><td>단거리 이동</td><td>2G</td><td>노선제</td></tr>
+<tr data-cat="service"><td>서비스</td><td>이동</td><td>마차 탑승 (장거리)</td><td>장거리 이동</td><td>10G</td><td>노선제</td></tr>
+<tr data-cat="service"><td>서비스</td><td>정보</td><td>길드 의뢰 등록</td><td>길드 게시판 등록비</td><td>5G</td><td>길드</td></tr>
+<tr data-cat="service"><td>서비스</td><td>정보</td><td>지도 구매</td><td>지역 지도</td><td>15G</td><td>지도상</td></tr>
+<tr data-cat="service"><td>서비스</td><td>정비</td><td>무기 수리</td><td>무기 내구도 복구</td><td>장비가격 × 10%</td><td>대장간</td></tr>
+<tr data-cat="service"><td>서비스</td><td>정비</td><td>방어구 수리</td><td>방어구 내구도 복구</td><td>장비가격 × 8%</td><td>대장간</td></tr>
+<tr data-cat="service"><td>서비스</td><td>마법</td><td>강화 마법 (1단계)</td><td>장비 강화</td><td>50G</td><td>마법 길드</td></tr>
+<tr data-cat="service"><td>서비스</td><td>마법</td><td>상태이상 해제</td><td>저주·약화 해제</td><td>20G</td><td>성당</td></tr>
+<tr data-cat="service"><td>서비스</td><td>마법</td><td>부활 의식</td><td>고위 부활 의식</td><td>500G</td><td>제한적</td></tr>
+<tr data-cat="material"><td>재료</td><td>일반</td><td>슬라임 젤리</td><td>포션 재료</td><td>2G</td><td>상점 매입</td></tr>
+<tr data-cat="material"><td>재료</td><td>일반</td><td>늑대 가죽</td><td>방어구 제작</td><td>5G</td><td>상점 매입</td></tr>
+<tr data-cat="material"><td>재료</td><td>일반</td><td>철 광석</td><td>무기·방어구 제작</td><td>8G</td><td>광산</td></tr>
+<tr data-cat="material"><td>재료</td><td>고급</td><td>독수리 깃털</td><td>화살·경갑 재료</td><td>20G</td><td>상점 매입</td></tr>
+<tr data-cat="material"><td>재료</td><td>고급</td><td>트롤 뼈</td><td>강화 재료</td><td>35G</td><td>상점 매입</td></tr>
+<tr data-cat="material"><td>재료</td><td>희귀</td><td>미스릴 원석</td><td>희귀 장비 제작</td><td>150G</td><td>경매 가능</td></tr>
+<tr data-cat="material"><td>재료</td><td>희귀</td><td>드래곤 비늘</td><td>최고급 방어구 재료</td><td>500G</td><td>특수 거래</td></tr>
+<tr data-cat="material"><td>재료</td><td>희귀</td><td>마정석 (하)</td><td>마법 도구 제작</td><td>80G</td><td>마법 길드</td></tr>
+<tr data-cat="material"><td>재료</td><td>희귀</td><td>마정석 (상)</td><td>고급 마법 도구 제작</td><td>300G</td><td>마법 길드</td></tr></tbody></table></div>
+  <div class="economy-policy"><h3>⚠ 물가 규칙</h3><ul>
+    <li>수도·대도시: 기준가 / 변방·오지: +20~30% / 상인 길드 지역: -10%</li>
+    <li>CHA 10 미만: 정가 / CHA 10~19: -5% / CHA 20 이상: -10~15% 협상 가능</li>
+    <li>희귀 등급 이상 장비는 일반 상점 판매 불가. 경매·특수 상인·던전 드롭 한정.</li>
+    <li>장비 판매 시 구매가의 40% 환급.</li>
+  </ul></div>
+</div>
+
+
+<div class="world-content" id="quests">
+  <div class="world-section-head world-section-head-with-action"><div>
+    <span class="eyebrow">TODAY'S COMMISSIONS</span><h2>오늘의 의뢰</h2>
+    <p>새로고침을 누를 때마다 길드 게시판의 의뢰가 바뀝니다.</p></div>
+    <button class="archive-refresh" id="refreshQuests" type="button">↻ 의뢰 새로고침</button>
+  </div>
+  <div class="quest-board" id="dynamicQuestBoard"></div>
+  <div class="accepted-quests"><h3>수락한 의뢰</h3><div id="acceptedQuestList"><p class="empty-state">아직 수락한 의뢰가 없습니다.</p></div></div>
+</div>
+<div class="world-content" id="wanted">
+
+        <div class="world-section-head">
+          <span class="eyebrow">ROYAL WANTED LIST</span>
+          <h2>왕국 현상수배범</h2>
+          <p>왕국 또는 왕실 기사단이 공식 수배 중인 위험 인물. 생포 여부에 따라 보상이 달라질 수 있습니다.</p>
+        </div>
+        <div class="wanted-grid">
+          <article class="wanted-card">
+            <div class="wanted-stamp">WANTED</div>
+            <div class="wanted-portrait">🌑</div>
+            <h3>모르가</h3><span>망령기사 · 흑기사</span>
+            <p>왕도 북부 공동묘지에서 기사단원 4명을 습격. 타락 여부는 확인되지 않음.</p>
+            <div class="bounty">현상금 8,000 G</div>
+          </article>
+          <article class="wanted-card">
+            <div class="wanted-stamp">WANTED</div>
+            <div class="wanted-portrait">💀</div>
+            <h3>네메시스</h3><span>사신 · 처형자</span>
+            <p>귀족 암살 사건의 유력 용의자. 목격자 진술이 서로 달라 위장 능력이 의심된다.</p>
+            <div class="bounty">현상금 12,500 G</div>
+          </article>
+          <article class="wanted-card">
+            <div class="wanted-stamp">WANTED</div>
+            <div class="wanted-portrait">😈</div>
+            <h3>벨리알</h3><span>악마 · 다크블레이드</span>
+            <p>금지된 계약을 중개하고 있다는 혐의. 여러 도시에서 동일한 문양이 발견됐다.</p>
+            <div class="bounty">현상금 20,000 G</div>
+          </article>
+          <article class="wanted-card">
+            <div class="wanted-stamp">DANGER</div>
+            <div class="wanted-portrait">🐲</div>
+            <h3>바하무트</h3><span>용왕 · 용황기사 연계</span>
+            <p>공식적으로는 수배가 아닌 '접촉 금지 대상'. 왕국은 단독 접근을 엄격히 금지하고 있다.</p>
+            <div class="bounty">보상 협의</div>
+          </article>
+        </div>
+      </div>
+
+      <div class="world-content" id="monsters"><div class="world-section-head"><span class="eyebrow">MONSTER ENCYCLOPEDIA</span><h2>몬스터 도감</h2><p>길드와 왕국이 기록한 적대 개체. 위험등급은 F → E → D → C → B → A → S → SS → SSS → EX 순입니다.</p></div><div class="monster-table-wrap"><table class="monster-table"><thead><tr><th>레벨</th><th>종족</th><th>이름</th><th>위험등급</th><th>획득 경험치</th><th>골드</th></tr></thead><tbody><tr><td>Lv.1</td><td>슬라임</td><td class="monster-name">푸른 슬라임</td><td><span class="danger">F</span></td><td>12 XP</td><td>4 G</td></tr><tr><td>Lv.4</td><td>고블린</td><td class="monster-name">고블린 약탈자</td><td><span class="danger">F</span></td><td>32 XP</td><td>14 G</td></tr><tr><td>Lv.8</td><td>늑대</td><td class="monster-name">회색늑대</td><td><span class="danger">E</span></td><td>85 XP</td><td>32 G</td></tr><tr><td>Lv.10</td><td>언데드</td><td class="monster-name">스켈레톤 병사</td><td><span class="danger">E</span></td><td>110 XP</td><td>45 G</td></tr><tr><td>Lv.12</td><td>오크</td><td class="monster-name">오크 전사</td><td><span class="danger">D</span></td><td>145 XP</td><td>60 G</td></tr><tr><td>Lv.17</td><td>언데드</td><td class="monster-name">스켈레톤 기사</td><td><span class="danger">D</span></td><td>260 XP</td><td>105 G</td></tr><tr><td>Lv.20</td><td>오우거</td><td class="monster-name">어린 오우거</td><td><span class="danger">C</span></td><td>360 XP</td><td>145 G</td></tr><tr><td>Lv.25</td><td>마수</td><td class="monster-name">블러드 울프</td><td><span class="danger">C</span></td><td>570 XP</td><td>220 G</td></tr><tr><td>Lv.30</td><td>트롤</td><td class="monster-name">산악 트롤</td><td><span class="danger">B</span></td><td>800 XP</td><td>320 G</td></tr><tr><td>Lv.34</td><td>언데드</td><td class="monster-name">듀라한</td><td><span class="danger">B</span></td><td>1,080 XP</td><td>430 G</td></tr><tr><td>Lv.37</td><td>와이번</td><td class="monster-name">어린 와이번</td><td><span class="danger">B</span></td><td>1,400 XP</td><td>550 G</td></tr><tr><td>Lv.40</td><td>키메라</td><td class="monster-name">하급 키메라</td><td><span class="danger">A</span></td><td>1,700 XP</td><td>680 G</td></tr><tr><td>Lv.45</td><td>언데드</td><td class="monster-name">데스 나이트</td><td><span class="danger">A</span></td><td>2,600 XP</td><td>950 G</td></tr><tr><td>Lv.50</td><td>드래곤</td><td class="monster-name">레서 드래곤</td><td><span class="danger">S</span></td><td>3,600 XP</td><td>1,400 G</td></tr><tr><td>Lv.55</td><td>언데드</td><td class="monster-name">리치</td><td><span class="danger">S</span></td><td>4,600 XP</td><td>1,850 G</td></tr><tr><td>Lv.60</td><td>거인</td><td class="monster-name">고대 거인</td><td><span class="danger">S</span></td><td>6,000 XP</td><td>2,500 G</td></tr><tr><td>Lv.62</td><td>드래곤</td><td class="monster-name">화염룡</td><td><span class="danger">SS</span></td><td>7,000 XP</td><td>3,000 G</td></tr><tr><td>Lv.65</td><td>악마</td><td class="monster-name">데몬 로드</td><td><span class="danger">SS</span></td><td>8,200 XP</td><td>3,500 G</td></tr><tr><td>Lv.67</td><td>언데드</td><td class="monster-name">고대 리치</td><td><span class="danger">SS</span></td><td>9,400 XP</td><td>4,000 G</td></tr><tr><td>Lv.70</td><td>마수</td><td class="monster-name">베히모스</td><td><span class="danger">SS</span></td><td>11,000 XP</td><td>4,700 G</td></tr><tr><td>Lv.75</td><td>고룡</td><td class="monster-name">고대 화룡</td><td><span class="danger">SSS</span></td><td>15,000 XP</td><td>6,500 G</td></tr><tr><td>Lv.77</td><td>대악마</td><td class="monster-name">심연공</td><td><span class="danger">SSS</span></td><td>17,500 XP</td><td>7,500 G</td></tr><tr><td>Lv.80</td><td>언데드</td><td class="monster-name">불사왕</td><td><span class="danger">SSS</span></td><td>20,000 XP</td><td>9,000 G</td></tr><tr><td>Lv.82</td><td>거인</td><td class="monster-name">타이탄</td><td><span class="danger">SSS</span></td><td>23,000 XP</td><td>10,500 G</td></tr><tr><td>Lv.85</td><td>마수</td><td class="monster-name">재앙의 베히모스</td><td><span class="danger">SSS</span></td><td>27,000 XP</td><td>12,000 G</td></tr><tr><td>Lv.88</td><td>마룡</td><td class="monster-name">심연룡</td><td><span class="danger">EX</span></td><td>32,000 XP</td><td>15,000 G</td></tr><tr><td>Lv.90</td><td>악마</td><td class="monster-name">마왕의 화신</td><td><span class="danger">EX</span></td><td>38,000 XP</td><td>18,000 G</td></tr><tr><td>Lv.92</td><td>언데드</td><td class="monster-name">망자의 군주</td><td><span class="danger">EX</span></td><td>45,000 XP</td><td>21,000 G</td></tr><tr><td>Lv.95</td><td>고룡</td><td class="monster-name">종말룡</td><td><span class="danger">EX</span></td><td>55,000 XP</td><td>27,000 G</td></tr><tr><td>Lv.97</td><td>타락체</td><td class="monster-name">영웅 포식자</td><td><span class="danger">EX</span></td><td>70,000 XP</td><td>35,000 G</td></tr><tr><td>Lv.100</td><td>재앙종</td><td class="monster-name">검은 태양의 짐승</td><td><span class="danger">EX</span></td><td>100,000 XP</td><td>50,000 G</td></tr></tbody></table></div><div class="monster-note"><strong>길드 기록관 주의</strong><p>표기 레벨은 평균 개체 기준입니다. 정예·변이·오염 개체는 같은 종족이라도 위험등급과 보상이 상승할 수 있습니다.</p></div></div>
+
+<div class="world-content" id="rumors">
+  <div class="world-section-head world-section-head-with-action"><div>
+    <span class="eyebrow">RUMORS & DAILY LIFE</span><h2>소문과 생활 기록</h2>
+    <p>새로고침할 때마다 주점·시장·여행자의 기록이 바뀝니다.</p></div>
+    <button class="archive-refresh" id="refreshRumors" type="button">↻ 기록 새로고침</button>
+  </div>
+  <div class="detail-columns" id="dynamicRumorBoard"></div>
+</div>
+</section>
+
+  </main>
+
+  <script>
+    const worldTabs = document.querySelectorAll('.world-tab');
+    const worldContents = document.querySelectorAll('.world-content');
+    worldTabs.forEach(btn => btn.addEventListener('click', () => {
+      worldTabs.forEach(b => b.classList.remove('active'));
+      worldContents.forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.worldTab).classList.add('active');
+    }));
+
+    // ---------------- Interactive World Map ----------------
+    const mapViewport=document.getElementById('mapViewport');
+    const mapCanvas=document.getElementById('mapCanvas');
+    const userPins=document.getElementById('userPins');
+
+    if(mapViewport && mapCanvas && userPins){
+      let mapX=-180,mapY=-80;
+      let dragging=false,startPointerX=0,startPointerY=0,startMapX=0,startMapY=0;
+      let selectedPinColor='#a94d4d';
+      const pinStorageKey='epicOfHeroes_worldMapPins';
+
+      const clampMap=()=>{
+        const minX=Math.min(0,mapViewport.clientWidth-mapCanvas.offsetWidth);
+        const minY=Math.min(0,mapViewport.clientHeight-mapCanvas.offsetHeight);
+        mapX=Math.max(minX,Math.min(0,mapX));
+        mapY=Math.max(minY,Math.min(0,mapY));
+      };
+      const applyMapPosition=()=>{
+        clampMap();
+        mapCanvas.style.transform=`translate(${mapX}px, ${mapY}px)`;
+      };
+
+      mapViewport.addEventListener('pointerdown',e=>{
+        if(e.target.closest('.map-pin')) return;
+        dragging=true;
+        startPointerX=e.clientX; startPointerY=e.clientY;
+        startMapX=mapX; startMapY=mapY;
+        mapViewport.setPointerCapture?.(e.pointerId);
+        mapViewport.classList.add('dragging');
+      });
+      mapViewport.addEventListener('pointermove',e=>{
+        if(!dragging) return;
+        mapX=startMapX+(e.clientX-startPointerX);
+        mapY=startMapY+(e.clientY-startPointerY);
+        applyMapPosition();
+      });
+      const stopDragging=()=>{dragging=false;mapViewport.classList.remove('dragging');};
+      mapViewport.addEventListener('pointerup',stopDragging);
+      mapViewport.addEventListener('pointercancel',stopDragging);
+
+      document.querySelectorAll('.pin-color').forEach(btn=>{
+        btn.addEventListener('click',()=>{
+          document.querySelectorAll('.pin-color').forEach(b=>b.classList.remove('active'));
+          btn.classList.add('active');
+          selectedPinColor=btn.dataset.pinColor;
+        });
+      });
+
+      let pins=[];
+      try{pins=JSON.parse(localStorage.getItem(pinStorageKey)||'[]');}catch(e){pins=[];}
+
+      const savePins=()=>{try{localStorage.setItem(pinStorageKey,JSON.stringify(pins));}catch(e){}};
+
+      const renderPins=()=>{
+        userPins.innerHTML='';
+        pins.forEach(pin=>{
+          const el=document.createElement('button');
+          el.type='button';
+          el.className='map-pin';
+          el.style.left=`${pin.x}px`;
+          el.style.top=`${pin.y}px`;
+          el.style.setProperty('--pin-color',pin.color);
+          el.title=pin.label||'사용자 핀';
+          el.innerHTML=`<span></span>${pin.label?`<em>${pin.label}</em>`:''}`;
+          el.addEventListener('click',ev=>{
+            ev.stopPropagation();
+            const action=prompt('핀 이름을 수정하세요. 완전히 삭제하려면 [삭제]라고 입력하세요.',pin.label||'');
+            if(action===null)return;
+            if(action.trim()==='삭제')pins=pins.filter(p=>p.id!==pin.id);
+            else pin.label=action.trim();
+            savePins();renderPins();
+          });
+          userPins.appendChild(el);
+        });
+      };
+
+      mapViewport.addEventListener('dblclick',e=>{
+        if(e.target.closest('.map-pin')) return;
+        const rect=mapCanvas.getBoundingClientRect();
+        const x=e.clientX-rect.left;
+        const y=e.clientY-rect.top;
+        const label=prompt('이 핀의 이름 또는 메모를 입력하세요.','');
+        if(label===null)return;
+        pins.push({id:Date.now()+Math.random(),x:Math.round(x),y:Math.round(y),color:selectedPinColor,label:label.trim()});
+        savePins();renderPins();
+      });
+
+      document.getElementById('resetMap')?.addEventListener('click',()=>{mapX=-180;mapY=-80;applyMapPosition();});
+      window.addEventListener('resize',applyMapPosition);
+      applyMapPosition();
+      renderPins();
+    }
+
+
+// Economy
+const economySearch=document.getElementById('economySearch'), economyCategory=document.getElementById('economyCategory'), economyCount=document.getElementById('economyCount');
+function filterEconomy(){if(!economySearch)return;let q=economySearch.value.toLowerCase(),cat=economyCategory.value,c=0;document.querySelectorAll('#economyTable tbody tr').forEach(r=>{let ok=r.textContent.toLowerCase().includes(q)&&(cat==='all'||r.dataset.cat===cat);r.style.display=ok?'':'none';if(ok)c++;});economyCount.textContent=`${c}개 항목`;}
+economySearch?.addEventListener('input',filterEconomy); economyCategory?.addEventListener('change',filterEconomy); filterEconomy();
+
+// Quests
+const questPool=[
+['C급','루멘 숲 약초 채집','월광초 12송이를 채집. 정령을 공격하지 않을 것.','850 G','Lv.12+','normal'],
+['B급','벨로스 항 상단 호위','왕도에서 벨로스 항까지 무역 상단을 호위한다.','2,100 G','2일 소요','normal'],
+['A급 · 긴급','적철 분화구 실종 조사','광물 조사대의 마지막 신호를 따라 폐광을 조사한다.','4,800 G','Lv.42+','urgent'],
+['D급','회색늑대 개체수 조절','왕도 외곽 농장을 습격하는 회색늑대 8마리를 토벌한다.','420 G','Lv.8+','normal'],
+['B급','철관문 보급품 운송','북부 요새까지 의약품 상자를 운반한다.','1,650 G','END 25+','normal'],
+['특수 의뢰','묘역에서 들려오는 목소리','봉쇄 구역에서 들리는 정체불명의 음성을 조사한다.','보수 비공개','영웅성 B+','special'],
+['C급','사라진 길드 인장','시장 거리에서 분실된 백은의 깃털 인장을 회수한다.','700 G','전투 불필요 가능','normal'],
+['A급','듀라한 토벌','남부 묘지에서 반복 출현하는 듀라한을 토벌한다.','5,200 G','파티 권장','urgent'],
+['B급','귀족가 야간 경비','로제트 후작저 야간 경비를 담당한다. 이상 징후 보고 있음.','2,400 G','Honor 25+','normal'],
+['D급','고블린 주술도구 회수','폐촌에 남은 주술 부적 3개를 확보한다.','560 G','Lv.10+','normal'],
+['S급','화염룡 비늘 확보','화염룡을 토벌하거나 탈피한 비늘을 확보한다.','12,000 G','Lv.60+ 권장','special'],
+['C급','길 잃은 전투마 수색','북쪽 초원에서 실종된 군마를 찾아 데려온다.','920 G','기마 적성 우대','normal']
+];
+const qBoard=document.getElementById('dynamicQuestBoard'),aList=document.getElementById('acceptedQuestList'),aKey='epicOfHeroes_acceptedQuests';
+let accepted=[];try{accepted=JSON.parse(localStorage.getItem(aKey)||'[]')}catch(e){}
+const pick=(a,n)=>[...a].sort(()=>Math.random()-.5).slice(0,n);
+function saveA(){try{localStorage.setItem(aKey,JSON.stringify(accepted))}catch(e){}}
+function renderA(){if(!aList)return;if(!accepted.length){aList.innerHTML='<p class="empty-state">아직 수락한 의뢰가 없습니다.</p>';return;}aList.innerHTML=accepted.map(q=>`<div class="accepted-quest-row"><div><strong>${q.title}</strong><small>${q.rank} · ${q.reward}</small></div><button data-cancel="${q.id}">포기</button></div>`).join('');aList.querySelectorAll('[data-cancel]').forEach(b=>b.onclick=()=>{accepted=accepted.filter(q=>String(q.id)!==b.dataset.cancel);saveA();renderA();});}
+function renderQ(){if(!qBoard)return;let s=pick(questPool,4);qBoard.innerHTML=s.map((q,i)=>`<article class="quest-paper ${q[5]==='urgent'?'urgent':q[5]==='special'?'special':''}"><div class="quest-pin">${q[5]==='special'?'✦':'◆'}</div><span class="quest-rank">${q[0]}</span><h3>${q[1]}</h3><p>${q[2]}</p><div class="quest-footer"><span>보수 ${q[3]}</span><span>${q[4]}</span></div><button class="quest-accept" data-i="${i}">수락</button></article>`).join('');qBoard.querySelectorAll('.quest-accept').forEach(b=>b.onclick=()=>{let q=s[+b.dataset.i];if(!accepted.some(a=>a.title===q[1])){accepted.push({id:Date.now()+Math.random(),rank:q[0],title:q[1],reward:q[3]});saveA();renderA();}b.textContent='수락 완료';b.disabled=true;});}
+document.getElementById('refreshQuests')?.addEventListener('click',renderQ);renderQ();renderA();
+
+// Rumors
+const rp=['벨로스 항에서 검은 비늘의 거대 생물이 목격되었다.','왕도 대장간에서 영웅의 검 조각이 거래되었다.','로제트 후작저 정원에서 새벽마다 같은 노래가 들린다.','철관문 북쪽에서 인간의 말을 하는 늑대를 봤다는 사냥꾼이 있다.','루멘 숲 중심에서 밤마다 푸른 불빛이 떠다닌다.','왕실 기사 몇 명이 이유 없이 휴직 처리되었다.','백은의 깃털 지하 창고에 왕실 인장이 찍힌 상자가 들어왔다.','묘역 봉인을 안쪽에서 두드렸다는 소문이 돈다.','상인 길드가 미스릴 가격을 조작한다는 말이 있다.','벨로스 항 7번 창고는 지도에는 있으나 문이 없다고 한다.'];
+const mp=['철검 120~180 G / 가죽 갑옷 15~25 G','하급 회복약 5~8 G / 마나 포션 10~14 G','미스릴 원석 140~190 G / 드래곤 비늘 시가','여관 일반실 3~5 G / 개인실 8~12 G','북부 식량 가격이 평소보다 약 20% 상승'];
+const tp=['북부 산길은 해질 무렵부터 통행 제한.','루멘 숲에서는 불을 크게 피우지 말 것.','왕도 귀족 지구 무장 출입 시 신분증 필요.','벨로스 항 야간 부두에서는 혼자 움직이지 말 것.','적철 분화구 진입 시 해독제와 내열 장비 권장.'];
+const dp=['왕도 광장에서 기사단 공개 훈련이 열린다.','백은의 깃털 길드 식당에서 스튜가 반값이다.','서부 시장에 떠돌이 마법상인이 도착했다.','대성당에서 무료 상태이상 검진을 실시한다.','저녁부터 왕도 북문이 임시 폐쇄될 예정이다.'];
+const rBoard=document.getElementById('dynamicRumorBoard');
+function lis(a,n){return pick(a,n).map(x=>`<li>${x}</li>`).join('')}
+function renderR(){if(!rBoard)return;rBoard.innerHTML=`<section class="detail-box"><h3>🍺 오늘의 주점 소문</h3><ul>${lis(rp,3)}</ul></section><section class="detail-box"><h3>🛒 현재 물가 메모</h3><ul>${lis(mp,3)}</ul></section><section class="detail-box"><h3>🌦 여행자 주의사항</h3><ul>${lis(tp,3)}</ul></section><section class="detail-box"><h3>📅 오늘의 생활 기록</h3><ul>${lis(dp,3)}</ul></section>`}
+document.getElementById('refreshRumors')?.addEventListener('click',renderR);renderR();
+
+// Classified
+document.getElementById('unlockClassified')?.addEventListener('click',()=>{let code=(document.getElementById('classifiedCode').value||'').trim().toLowerCase(),s=document.getElementById('classifiedStatus');if(code==='견습전사'){document.getElementById('classifiedNotice').classList.add('unlocked');s.textContent='기밀 공고 열람 승인';}else{s.textContent='암호가 일치하지 않습니다.';}});
+
+  </script>
+</body>
+</html>

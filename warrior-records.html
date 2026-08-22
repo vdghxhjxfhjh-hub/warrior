@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>전사의 기록 | 영웅들의 서사시 I</title><link rel="stylesheet" href="style.css"></head>
+<body class="records-page">
+<header class="records-topbar"><a class="mini-brand" href="index.html"><span class="mini-crest">⚔</span><span><small>EPIC OF HEROES · I</small><strong>전사의 기록</strong></span></a><a class="top-back" href="index.html">← 로비</a></header>
+
+
+<div class="floating-tools">
+  <!-- 전직 루트 메모: 기본 접힘 -->
+  <aside class="floating-note collapsed" id="routeNote">
+    <div class="floating-note-head">
+      <div>
+        <small>ADVANCEMENT NOTE</small>
+        <strong>전직 루트 메모</strong>
+      </div>
+      <button class="note-collapse" data-target="routeNote" aria-label="전직 루트 메모 펼치기">＋</button>
+    </div>
+    <div class="floating-note-body">
+      <div class="route-plain-note">
+        <!-- 아래 텍스트를 원하는 전직 루트 내용으로 직접 수정하세요. -->
+        전직 루트 내용을 이곳에 작성하세요.
+
+        예시)
+        견습 전사 → 검사 → 검객 → 검호 → 검성
+
+        필요 스탯이나 특수 조건, NPC 조건 등
+        원하는 내용을 자유롭게 적어둘 수 있습니다.
+      </div>
+    </div>
+  </aside>
+
+  <!-- 이용자 전용 메모: 브라우저에 자동 저장 / 기본 접힘 -->
+  <aside class="floating-note user-note collapsed" id="userNote">
+    <div class="floating-note-head">
+      <div>
+        <small>PLAYER MEMO</small>
+        <strong>이용자 전용 메모</strong>
+      </div>
+      <button class="note-collapse" data-target="userNote" aria-label="이용자 메모 펼치기">＋</button>
+    </div>
+    <div class="floating-note-body">
+      <textarea id="playerMemo" class="player-memo" placeholder="전직 계획, 목표 스탯, 만나야 할 NPC 등을 자유롭게 메모하세요."></textarea>
+      <div class="memo-actions">
+        <span id="memoStatus">자동 저장됨</span>
+        <button type="button" id="clearMemo">메모 지우기</button>
+      </div>
+    </div>
+  </aside>
+</div>
+
+
+<main class="records-shell">
+<section class="records-hero"><p class="series">WARRIOR ARCHIVE</p><h1>전사의 기록</h1><p>전직의 길에서 만나게 되는 인물들과 동료, 스승, 계약자들의 기록.</p></section>
+<section class="route-panel">
+  <div class="route-heading"><span class="eyebrow">추천 루트</span><h2>당신이 걷고 싶은 전사의 길을 선택하세요</h2><p>탭을 선택하면 해당 전직 계열에서 만날 수 있는 주요 NPC와 전직 루트가 함께 변경됩니다.</p></div>
+  <div class="tabs" role="tablist"><button class="tab-btn active" data-tab="sword">검사</button><button class="tab-btn" data-tab="lancer">랜서</button><button class="tab-btn" data-tab="axe">도끼</button><button class="tab-btn" data-tab="shield">방패병</button><button class="tab-btn" data-tab="fighter">격투가</button><button class="tab-btn" data-tab="guard">궁전 호위병</button><button class="tab-btn" data-tab="field">야전병</button><button class="tab-btn" data-tab="barbarian">야만전사</button><button class="tab-btn" data-tab="hybrid">혼합 · 히든</button></div>
+  <div class="tab-content active" id="sword">
+      <div class="route-intro"><span class="route-mark">⚔</span><div><h3>검사 계열</h3><p>검술, 기사도, 성력과 마력으로 분화되는 가장 폭넓은 전사 루트.</p></div></div>
+      <div class="npc-grid"><article class="npc-card">
+      <div class="portrait-slot"><span>🗡️</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>아르투스</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>남성</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>기사 / 인간</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>원칙적이고 침착함</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🛡️ 단정한 존댓말</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>👑</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>로웬</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>왕실기사 / 인간</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>👑 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>✨</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>엘레나</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>성기사 / 인간</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>✨ 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>👼</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>세라피엘</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>여성</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>성기사 / 상급천사</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>엄격하지만 자애로움</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>✨ 경건하고 정중함</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🕊️</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>리브라</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>신성수호자 / 성령</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🕊️ 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🌑</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>모르가</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>불명</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>흑기사 / 망령기사</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>냉정하고 폐쇄적</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🌑 짧고 낮은 반말</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>💀</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>카인</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>죽음기사 / 언데드</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>💀 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🔥</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>루미나</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>여성</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>마검사 / 검의 정령</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>호기심 많고 직설적</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🔥 가벼운 반말</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🔮</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>아르칸</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>블레이드메이지 / 고대마족</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🔮 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🔥</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>이그니스</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>룬나이트 / 화염정령</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🔥 미정</strong></div>
+      </div>
+    </article></div>
+    </div><div class="tab-content" id="lancer">
+      <div class="route-intro"><span class="route-mark">♞</span><div><h3>랜서 계열</h3><p>창술과 기마 전투, 드래곤과의 계약으로 이어지는 전직 루트.</p></div></div>
+      <div class="npc-grid"><article class="npc-card">
+      <div class="portrait-slot"><span>🗡️</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>발트</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>창기사 / 인간</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>⚔️ 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🐉</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>파프니르</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>수컷</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>용기사 / 드래곤</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>오만하지만 의리가 깊음</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🐉 고풍스러운 반말</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🐲</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>니드호그</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>드래곤마스터 / 고룡</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🐲 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🪽</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>루미드라</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>드래군 / 와이번</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🪽 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🐎</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>브루노</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>수컷</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>중기병 / 전투마</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>충직하고 끈질김</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🐎 비언어적 표현</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🐴</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>아이기스</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>철기장군 / 철갑마</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🐴 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🪓</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>오르카</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>할버디어 / 오크</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🪓 미정</strong></div>
+      </div>
+    </article></div>
+    </div><div class="tab-content" id="axe">
+      <div class="route-intro"><span class="route-mark">🪓</span><div><h3>도끼전사 계열</h3><p>분노, 생존력, 압도적인 근력을 중심으로 성장하는 전직 루트.</p></div></div>
+      <div class="npc-grid"><article class="npc-card">
+      <div class="portrait-slot"><span>🐺</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>펜리르</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>수컷</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>버서커 / 늑대왕</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>거칠고 본능적</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🐺 낮은 으르렁거림</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>👹</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>그룸</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>광전사 / 오우거</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>💢 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>💀</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>네메시스</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>불명</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>처형자 / 사신</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>무감정하고 계산적</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>💀 건조한 단문체</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🪨</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>가이아</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>타이탄워리어 / 대지정령</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🪨 미정</strong></div>
+      </div>
+    </article></div>
+    </div><div class="tab-content" id="shield">
+      <div class="route-intro"><span class="route-mark">🛡</span><div><h3>방패병 계열</h3><p>수호와 인내, 진형 유지에 특화된 방어형 전직 루트.</p></div></div>
+      <div class="npc-grid"><article class="npc-card">
+      <div class="portrait-slot"><span>🛡️</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>아이기스</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>불명</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>가디언 / 방패정령</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>과묵하고 보호 본능이 강함</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🛡️ 짧고 묵직함</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🗿</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>바스티온</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>불명</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>요새기사 / 골렘</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>묵묵하고 명령에 충실함</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🗿 단답형</strong></div>
+      </div>
+    </article></div>
+    </div><div class="tab-content" id="fighter">
+      <div class="route-intro"><span class="route-mark">✊</span><div><h3>격투가 계열</h3><p>육체 단련과 전투 감각, 기의 운용을 중심으로 성장하는 전직 루트.</p></div></div>
+      <div class="npc-grid"><article class="npc-card">
+      <div class="portrait-slot"><span>🐉</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>청룡</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>기공사 / 영수</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🐉 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🐯</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>백호</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>수컷</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>천무인 / 영수</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>호쾌하고 승부욕이 강함</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🐯 시원한 반말</strong></div>
+      </div>
+    </article></div>
+    </div><div class="tab-content" id="guard">
+      <div class="route-intro"><span class="route-mark">♛</span><div><h3>궁전 호위병 계열</h3><p>왕실과 제국을 수호하며 명예와 통솔력을 쌓아가는 전직 루트.</p></div></div>
+      <div class="npc-grid"><article class="npc-card">
+      <div class="portrait-slot"><span>👑</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>레오나르</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>남성</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>친위기사 / 인간</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>예의 바르고 책임감이 강함</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>👑 격식 있는 존댓말</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🎖️</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>루이스</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>왕실근위대장 / 인간</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🎖️ 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🌿</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>실비아</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>황제호위관 / 엘프</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🌿 미정</strong></div>
+      </div>
+    </article></div>
+    </div><div class="tab-content" id="field">
+      <div class="route-intro"><span class="route-mark">🏕</span><div><h3>야전병 계열</h3><p>실전 경험과 적응력, 전술 지휘를 통해 성장하는 현실적인 전투 루트.</p></div></div>
+      <div class="npc-grid"><article class="npc-card">
+      <div class="portrait-slot"><span>🧭</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>가렌</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>남성</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>용병 / 인간</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>현실적이고 유쾌함</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🧭 편한 반말</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🐺</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>쉐도우</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>레인저 / 늑대</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🐺 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>📜</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>에이든</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>장군 / 인간</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>📜 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>♟️</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>체스</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>대원수 / 호문쿨루스</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>♟️ 미정</strong></div>
+      </div>
+    </article></div>
+    </div><div class="tab-content" id="barbarian">
+      <div class="route-intro"><span class="route-mark">🐾</span><div><h3>야만전사 계열</h3><p>야성, 부족 문화, 토템과 정령의 힘을 받아들이는 전직 루트.</p></div></div>
+      <div class="npc-grid"><article class="npc-card">
+      <div class="portrait-slot"><span>🪶</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>브락</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>남성</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>부족전사 / 오크</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>호전적이지만 정직함</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🪶 거친 반말</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🐺</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>토르가</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>토템전사 / 정령늑대</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🐺 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🌳</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>우루</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>토템마스터 / 나무정령</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🌳 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🌿</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>아나키</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>불명</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>정령전사 / 토템령</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>신비롭고 느긋함</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🌿 은유적인 존댓말</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>⛰️</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>가르간</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>워로드 / 거인</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>⛰️ 미정</strong></div>
+      </div>
+    </article></div>
+    </div><div class="tab-content" id="hybrid">
+      <div class="route-intro"><span class="route-mark">✦</span><div><h3>혼합 · 히든 계열</h3><p>둘 이상의 전직 계통, 특수 계약 혹은 영웅 계승으로만 만날 수 있는 희귀 인물들.</p></div></div>
+      <div class="npc-grid"><article class="npc-card">
+      <div class="portrait-slot"><span>👼</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>우리엘</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>팔라딘 / 대천사</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>✨ 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🐉</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>아우렐리온</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>드래곤로드 / 고룡</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🐉 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🐲</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>바하무트</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>용황기사 / 용왕</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>👑 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>😈</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>벨리알</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>다크블레이드 / 악마</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>😈 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>👹</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>아스타로트</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>카오스나이트 / 대악마</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🔥 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🪽</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>메타트론</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>룬팔라딘 / 천사</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🪽 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🐺</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>펜릴</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>비스트로드 / 신수</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🐺 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🐕</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>케르베로스</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>야수왕 / 마수</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🐕 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🗿</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>티탄</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>파괴신 / 고대거인</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🗿 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>⚒️</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>헤파이스</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>미정</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>철신 / 거신</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>미정</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>⚒️ 미정</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>⚜️</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>엑스칼리온</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>불명</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>신검황 / 성검의 정령</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>고결하고 엄격함</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>⚜️ 위엄 있는 말투</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🩸</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>아바돈</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>불명</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>마검황 / 마검의 혼</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>냉혹하고 유혹적임</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🩸 낮고 느린 말투</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>🐲</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>황룡</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>불명</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>천무제 / 사성수</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>초연하고 위엄 있음</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>🐲 고풍스러운 존댓말</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>☄️</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>아포칼립스</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>불명</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>종말의 기사 / 종말룡</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>파괴적이고 침착함</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>☄️ 장중한 단문체</strong></div>
+      </div>
+    </article>
+<article class="npc-card">
+      <div class="portrait-slot"><span>✦</span><small>PROFILE IMAGE</small></div>
+      <div class="npc-info">
+        <!-- 주석: 이름 --><div><span>이름</span><strong>오메가</strong></div>
+        <!-- 주석: 성별 --><div><span>성별</span><strong>불명</strong></div>
+        <!-- 주석: 직업 / 종족 --><div><span>직업 / 종족</span><strong>성천검제 / 태초의 신수</strong></div>
+        <!-- 주석: 성격 --><div><span>성격</span><strong>신비롭고 중립적임</strong></div>
+        <!-- 주석: O(이모지) 말투 --><div><span>말투</span><strong>✦ 울림이 있는 말투</strong></div>
+      </div>
+    </article></div>
+    </div>
+</section>
+</main>
+
+<script>
+
+const buttons=[...document.querySelectorAll('.tab-btn')];
+const contents=[...document.querySelectorAll('.tab-content')];
+
+buttons.forEach(button=>button.addEventListener('click',()=>{
+  buttons.forEach(b=>b.classList.remove('active'));
+  contents.forEach(c=>c.classList.remove('active'));
+  button.classList.add('active');
+  const target=document.getElementById(button.dataset.tab);
+  if(target) target.classList.add('active');
+}));
+
+// 두 메모 박스는 페이지가 열릴 때 항상 기본 접힘 상태입니다.
+document.querySelectorAll('.note-collapse').forEach(button=>{
+  button.addEventListener('click',()=>{
+    const box=document.getElementById(button.dataset.target);
+    const isCollapsed=box.classList.toggle('collapsed');
+    button.textContent=isCollapsed ? '＋' : '−';
+    button.setAttribute('aria-label', isCollapsed ? '메모 펼치기' : '메모 접기');
+  });
+});
+
+// 이용자 전용 메모: 브라우저 LocalStorage 자동 저장
+const playerMemo=document.getElementById('playerMemo');
+const memoStatus=document.getElementById('memoStatus');
+const clearMemo=document.getElementById('clearMemo');
+const memoKey='epicOfHeroes_playerMemo';
+
+try{ playerMemo.value=localStorage.getItem(memoKey) || ''; }catch(e){}
+
+let memoTimer;
+playerMemo.addEventListener('input',()=>{
+  memoStatus.textContent='저장 중…';
+  clearTimeout(memoTimer);
+  memoTimer=setTimeout(()=>{
+    try{
+      localStorage.setItem(memoKey,playerMemo.value);
+      memoStatus.textContent='자동 저장됨';
+    }catch(e){
+      memoStatus.textContent='이 브라우저에서는 저장할 수 없음';
+    }
+  },250);
+});
+
+clearMemo.addEventListener('click',()=>{
+  if(confirm('작성한 메모를 모두 지울까요?')){
+    playerMemo.value='';
+    try{localStorage.removeItem(memoKey);}catch(e){}
+    memoStatus.textContent='메모가 비워짐';
+  }
+});
+
+</script>
+</body></html>
