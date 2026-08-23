@@ -11,20 +11,35 @@
     <div class="floating-note-head">
       <div>
         <small>ADVANCEMENT NOTE</small>
-        <strong>전직 루트 메모</strong>
+        <strong>필수 열람지</strong>
       </div>
       <button class="note-collapse" data-target="routeNote" aria-label="전직 루트 메모 펼치기">＋</button>
     </div>
     <div class="floating-note-body">
       <div class="route-plain-note">
         <!-- 아래 텍스트를 원하는 전직 루트 내용으로 직접 수정하세요. -->
-        전직 루트 내용을 이곳에 작성하세요.
+        플레이 전 참고하시면 좋은 요소.
 
-        예시)
-        견습 전사 → 검사 → 검객 → 검호 → 검성
+        ⪧ 스탯
+        STR (근력) / AGI (민첩) / DEX (기교)
+        VIT (체력) / END (지구력) / INT (지능)
+        WIS (지혜) / WIL (의지) / CHA (카리스마)
+        LUK (행운)(치명타 연계)
 
-        필요 스탯이나 특수 조건, NPC 조건 등
-        원하는 내용을 자유롭게 적어둘 수 있습니다.
+        ⪧ 전투 성향
+        Honor (명예) / Rage (분노) / Cruelty (잔혹성)
+        Faith (신앙) / Instinct (야성) / Leadership (통솔력)
+        Adaptability (적응력) / Battle Sense (전투감각)
+
+        ⪧ 소환석
+        최대 3개를 보유하고 있으며, 총 3명의 인원을 조합하여 파티를 구성할 수 있습니다.
+        다양한 능력/특성/효과를 열람 후. 
+        하단 메모지에 원하시는 조합을 기록해놓으시면 도움이 되실 겁니다.
+
+        ⪧ 전직 계통 (계통별 필요 스탯은 깡통이 직접 지정 합니다.)
+        검사 / 랜서 / 도끼전사 / 
+        방패병 / 격투가 / 궁전호위병
+        야전병 / 야만전사 
       </div>
     </div>
   </aside>
@@ -50,12 +65,12 @@
 
 
 <main class="records-shell">
-<section class="records-hero"><p class="series">WARRIOR ARCHIVE</p><h1>전사의 기록</h1><p>전직의 길에서 만나게 되는 인물들과 동료, 스승, 계약자들의 기록.</p></section>
+<section class="records-hero"><p class="series">WARRIOR ARCHIVE</p><h1>전사의 기록</h1><p>전직의 길에서 만날 수 있는 동료들의 기록</p></section>
 <section class="route-panel">
-  <div class="route-heading"><span class="eyebrow">추천 루트</span><h2>당신이 걷고 싶은 전사의 길을 선택하세요</h2><p>탭을 선택하면 해당 전직 계열에서 만날 수 있는 주요 NPC와 전직 루트가 함께 변경됩니다.</p></div>
+  <div class="route-heading"><span class="eyebrow">인물 열람</span><h2>다양한 조합을 가진 파티를 이루어 보세요.</h2><p>탭을 선택하면 해당 전직 계열에서 만날 수 있는 주요 NPC와 필수 열람서가 함께 변경됩니다.</p></div>
   <div class="tabs" role="tablist"><button class="tab-btn active" data-tab="sword">검사</button><button class="tab-btn" data-tab="lancer">랜서</button><button class="tab-btn" data-tab="axe">도끼</button><button class="tab-btn" data-tab="shield">방패병</button><button class="tab-btn" data-tab="fighter">격투가</button><button class="tab-btn" data-tab="guard">궁전 호위병</button><button class="tab-btn" data-tab="field">야전병</button><button class="tab-btn" data-tab="barbarian">야만전사</button><button class="tab-btn" data-tab="hybrid">혼합 · 히든</button></div>
   <div class="tab-content active" id="sword">
-      <div class="route-intro"><span class="route-mark">⚔</span><div><h3>검사 계열</h3><p>검술, 기사도, 성력과 마력으로 분화되는 가장 폭넓은 전사 루트.</p></div></div>
+      <div class="route-intro"><span class="route-mark">⚔</span><div><h3>검사</h3><p>검술, 기사도, 성력과 마력으로 분화되는 기본적인 동료들.</p></div></div>
       <div class="npc-grid"><article class="npc-card">
       <div class="portrait-slot">
     <img src="https://pub-ea583730072d437db7db3801624b8b65.r2.dev/%EC%95%84%EB%A5%B4%ED%88%AC%EC%8A%A4%20%ED%94%84%EB%A1%9C%ED%95%84.jpg" alt="아르투스 프로필">
@@ -165,16 +180,14 @@
       </div>
     </article>
 <article class="npc-card">
-      <div class="portrait-slot"><img src="https://pub-ea583730072d437db7db3801624b8b65.r2.dev/%EC%95%84%EB%A5%B4%EC%B9%B8%20%ED%94%84%EB%A1%9C%ED%95%84.jpg" alt="아르칸 프로필">
-      </div>
+       <div class="portrait-slot"><span>🔮</span><small>행방불명</small></div>
       <div class="npc-info">
-        <!-- 이름 --><div><span>이름</span><strong>아르칸</strong></div>
-        <!-- 성별 --><div><span>성별</span><strong>여성</strong></div>
-        <!-- 종족 --><div><span>종족</span><strong>고대마족</strong></div>
-        <!-- 성격 --><div><span>성격</span><strong>3w2 · I/D · 유혹적 · 밀당</strong></div>
-        <!-- 말투 --><div><span>말투</span><strong>반존대 · 사극체 · 애교</strong></div>
-        <!-- 고유 --><div><span>특성</span><strong>막대한 마력 자체생성 <br>전투가 길어질수록 주변마력흡수·강화.</strong></div>
-        <!-- 19 여부 --> <div><span>19</span><strong>O</strong></div>
+        <!-- 이름 --><div><span>이름</span><strong>비공개</strong></div>
+        <!-- 성별 --><div><span>성별</span><strong>비공개</strong></div>
+        <!-- 종족 --><div><span>종족</span><strong>비공개</strong></div>
+        <!-- 성격 --><div><span>성격</span><strong>불명</strong></div>
+        <!-- 말투 --><div><span>말투</span><strong>불명</strong></div>
+        <!-- 고유 --><div><span>특성</span><strong>불명</strong></div>
       </div>
     </article>
 <article class="npc-card">
@@ -191,7 +204,7 @@
       </div>
     </article></div>
     </div><div class="tab-content" id="lancer">
-      <div class="route-intro"><span class="route-mark">♞</span><div><h3>랜서 계열</h3><p>창술과 기마 전투, 드래곤과의 계약으로 이어지는 전직 루트.</p></div></div>
+      <div class="route-intro"><span class="route-mark">♞</span><div><h3>랜서 계열</h3><p>창술과 기마 전투, 드래곤과의 계약으로 이루어지는 동료들.</p></div></div>
       <div class="npc-grid"><article class="npc-card">
       <div class="portrait-slot"><img src="https://pub-ea583730072d437db7db3801624b8b65.r2.dev/%EB%B0%9C%ED%8A%B8%20%ED%94%84%EB%A1%9C%ED%95%84.jpg" alt="발트 프로필">
       </div>
@@ -258,57 +271,49 @@
       </div>
     </article>
 <article class="npc-card">
-      <div class="portrait-slot"><img src="https://pub-ea583730072d437db7db3801624b8b65.r2.dev/%EC%98%A4%EB%A5%B4%EC%B9%B4%20%ED%94%84%EB%A1%9C%ED%95%84.jpg" alt="오르카 프로필">
-      </div>
+      <div class="portrait-slot"><span>🪓</span><small>포획</small></div>
       <div class="npc-info">
-        <!-- 이름 --><div><span>이름</span><strong>오르카</strong></div>
-        <!-- 성별 --><div><span>성별</span><strong>여성</strong></div>
-        <!-- 종족 --><div><span>종족</span><strong>오크</strong></div>
+        <!-- 이름 --><div><span>이름</span><strong>비공개</strong></div>
+        <!-- 성별 --><div><span>성별</span><strong>비공개</strong></div>
+        <!-- 종족 --><div><span>종족</span><strong>비공개</strong></div>
         <!-- 성격 --><div><span>성격</span><strong>8w7 · D · 당당함 · 외강내강</strong></div>
         <!-- 말투 --><div><span>말투</span><strong>반말 · 단답형 · 명령조 · 자유분방</strong></div>
         <!-- 고유 --><div><span>특성</span><strong>피해발생 시 STR·END 점진적 증가, <br>전투 종료 후 스트레스·성욕증가.</strong></div>
-        <!-- 19 여부 --> <div><span>19</span><strong>O</strong></div>
       </div>
     </article></div>
     </div><div class="tab-content" id="axe">
-      <div class="route-intro"><span class="route-mark">🪓</span><div><h3>도끼전사 계열</h3><p>분노, 생존력, 압도적인 근력을 중심으로 성장하는 전직 루트.</p></div></div>
+      <div class="route-intro"><span class="route-mark">🪓</span><div><h3>도끼전사 계열</h3><p>분노, 생존력, 압도적인 근력을 중심으로 이루어진 동료들.</p></div></div>
       <div class="npc-grid"><article class="npc-card">
-      <div class="portrait-slot"><img src="https://pub-ea583730072d437db7db3801624b8b65.r2.dev/%ED%8E%9C%EB%A6%AC%EB%A5%B4%20%ED%94%84%EB%A1%9C%ED%95%84.jpg" alt="펜리르 프로필">
-      </div>
+      <div class="portrait-slot"><span>🐺</span><small>행방불명</small></div>
       <div class="npc-info">
-        <!-- 이름 --><div><span>이름</span><strong>펜리르</strong></div>
-        <!-- 성별 --><div><span>성별</span><strong>수컷</strong></div>
-        <!-- 직업 --><div><span>직업</span><strong>늑대왕</strong></div>
+        <!-- 이름 --><div><span>이름</span><strong>비공개</strong></div>
+        <!-- 성별 --><div><span>성별</span><strong>비공개</strong></div>
+        <!-- 직업 --><div><span>직업</span><strong>비공개</strong></div>
         <!-- 성격 --><div><span>성격</span><strong>2w1 · S/C · 정중함 · 인정욕심</strong></div>
         <!-- 말투 --><div><span>말투</span><strong>사극체 · 반존대 · 당당함</strong></div>
         <!-- 고유 --><div><span>효과</span><strong>자신과 함께 싸우는 아군 공격력·이동속도 상승.</strong></div>
-        <!-- 19 여부 --> <div><span>19</span><strong>X</strong></div>
       </div>
     </article>
 <article class="npc-card">
-      <div class="portrait-slot"><img src="https://pub-ea583730072d437db7db3801624b8b65.r2.dev/%EA%B7%B8%EB%A3%B8%20%ED%94%84%EB%A1%9C%ED%95%84.jpg" alt="그룸 프로필">
-      </div>
+      <div class="portrait-slot"><span>👹</span><small>포획</small></div>
       <div class="npc-info">
-        <!-- 이름 --><div><span>이름</span><strong>그룸</strong></div>
-        <!-- 성별 --><div><span>성별</span><strong>여성</strong></div>
-        <!-- 종족 --><div><span>종족</span><strong>오우거</strong></div>
+        <!-- 이름 --><div><span>이름</span><strong>비공개</strong></div>
+        <!-- 성별 --><div><span>성별</span><strong>비공개</strong></div>
+        <!-- 종족 --><div><span>종족</span><strong>비공개</strong></div>
         <!-- 성격 --><div><span>성격</span><strong>8w7 · D · 건방짐 · 뻔뻔함</strong></div>
         <!-- 말투 --><div><span>말투</span><strong>단답형 · 명령조 · 반말</strong></div>
         <!-- 고유 --><div><span>특성</span><strong>대형무기의 페널티 적용 X <br>전투시작 시 일시적 아군 STR 증가.</strong></div>
-        <!-- 19 여부 --> <div><span>19</span><strong>O</strong></div>
       </div>
     </article>
 <article class="npc-card">
-      <div class="portrait-slot"><img src="https://pub-ea583730072d437db7db3801624b8b65.r2.dev/%EB%84%A4%EB%A9%94%EC%8B%9C%EC%8A%A4%20%ED%94%84%EB%A1%9C%ED%95%84.png" alt="네메시스 프로필">
-      </div>
+      <div class="portrait-slot"><span>💀</span><small>행방불명</small></div>
       <div class="npc-info">
-        <!-- 이름 --><div><span>이름</span><strong>네메시스</strong></div>
-        <!-- 성별 --><div><span>성별</span><strong>여</strong></div>
-        <!-- 종족 --><div><span>종족</span><strong>사신</strong></div>
-        <!-- 성격 --><div><span>성격</span><strong>2w3 · I/D · 감정적 · 짓궃음 </strong></div>
-        <!-- 말투 --><div><span>말투</span><strong>능청 · 존댓말 · 빠른말 · 수다쟁이</strong></div>
-        <!-- 고유 --><div><span>능력</span><strong>대상에게 죽음의 표식 부여 <br>표식이 부여 된 대상의 체력이 낮을수록 받는 피해량 증가.</strong></div>
-        <!-- 19 여부 --> <div><span>19</span><strong>X</strong></div>
+        <!-- 이름 --><div><span>이름</span><strong>비공개</strong></div>
+        <!-- 성별 --><div><span>성별</span><strong>비공개</strong></div>
+        <!-- 종족 --><div><span>종족</span><strong>비공개</strong></div>
+        <!-- 성격 --><div><span>성격</span><strong>불명</strong></div>
+        <!-- 말투 --><div><span>말투</span><strong>불명</strong></div>
+        <!-- 고유 --><div><span>능력</span><strong>불명</strong></div>
       </div>
     </article>
 <article class="npc-card">
@@ -325,7 +330,7 @@
       </div>
     </article></div>
     </div><div class="tab-content" id="shield">
-      <div class="route-intro"><span class="route-mark">🛡</span><div><h3>방패병 계열</h3><p>수호와 인내, 진형 유지에 특화된 방어형 전직 루트.</p></div></div>
+      <div class="route-intro"><span class="route-mark">🛡</span><div><h3>방패병 계열</h3><p>수호와 인내, 진형 유지에 특화된 방어형 동료.</p></div></div>
       <div class="npc-grid"><article class="npc-card">
       <div class="portrait-slot"><img src="https://pub-ea583730072d437db7db3801624b8b65.r2.dev/%EC%95%84%EC%9D%B4%EA%B8%B0%EC%8A%A4%20%ED%94%84%EB%A1%9C%ED%95%84.jpg" alt="아이기스 프로필">
       </div>
@@ -340,20 +345,18 @@
       </div>
     </article>
 <article class="npc-card">
-      <div class="portrait-slot"><img src="https://pub-ea583730072d437db7db3801624b8b65.r2.dev/%EB%B0%94%EC%8A%A4%ED%8B%B0%EC%98%A8%20%ED%94%84%EB%A1%9C%ED%95%84.jpg" alt="바스티온 프로필">
-      </div>
+      <div class="portrait-slot"><span>🗿</span><small>포획</small></div>
       <div class="npc-info">
-        <!-- 이름 --><div><span>이름</span><strong>바스티온</strong></div>
-        <!-- 성별 --><div><span>성별</span><strong>여성</strong></div>
-        <!-- 직업 / 종족 --><div><span>직업 / 종족</span><strong>요새기사 · 인간</strong></div>
+        <!-- 이름 --><div><span>이름</span><strong>비공개</strong></div>
+        <!-- 성별 --><div><span>성별</span><strong>비공개</strong></div>
+        <!-- 직업 / 종족 --><div><span>직업 / 종족</span><strong>비공개</strong></div>
         <!-- 성격 --><div><span>성격</span><strong>6w5 · S/C · 순종적 · 부끄럼타는</strong></div>
         <!-- 말투 --><div><span>말투</span><strong>적은 말수 · 단답형 · 행동위주</strong></div>
         <!-- 고유 --><div><span>특성</span><strong>움직임을 멈춘 동안 방어력 지속 증가<br>일정시간 후 최대치도달.</strong></div>
-        <!-- 19 여부 --> <div><span>19</span><strong>O</strong></div>
       </div>
     </article></div>
     </div><div class="tab-content" id="fighter">
-      <div class="route-intro"><span class="route-mark">✊</span><div><h3>격투가 계열</h3><p>육체 단련과 전투 감각, 기의 운용을 중심으로 성장하는 전직 루트.</p></div></div>
+      <div class="route-intro"><span class="route-mark">✊</span><div><h3>격투가 계열</h3><p>육체 단련과 전투 감각, 기의 운용을 중심으로 전투하는 동료.</p></div></div>
       <div class="npc-grid"><article class="npc-card">
       <div class="portrait-slot"><img src="https://pub-ea583730072d437db7db3801624b8b65.r2.dev/%EC%B2%AD%EB%A3%A1%20%ED%94%84%EB%A1%9C%ED%95%84.jpg" alt="청룡 프로필">
       </div>
@@ -368,20 +371,18 @@
       </div>
     </article>
 <article class="npc-card">
-      <div class="portrait-slot"><img src="https://pub-ea583730072d437db7db3801624b8b65.r2.dev/%EB%B0%B1%ED%98%B8%20%ED%94%84%EB%A1%9C%ED%95%84.jpg" alt="백호 프로필">
-      </div>
+            <div class="portrait-slot"><span>🐯</span><small>행방불명</small></div>
       <div class="npc-info">
-        <!-- 이름 --><div><span>이름</span><strong>백호</strong></div>
-        <!-- 성별 --><div><span>성별</span><strong>남성</strong></div>
-        <!-- 종족 --><div><span>종족</span><strong>영수 靈獸</strong></div>
-        <!-- 성격 --><div><span>성격</span><strong>5w6 · C · 나긋나긋 · 무시함</strong></div>
-        <!-- 말투 --><div><span>말투</span><strong>사극체 · 은둔고수 · 존댓말</strong></div>
-        <!-- 고유 --><div><span>특성</span><strong>전투 돌입 시 STR·AGI 증가, 공포효과 면역획득.</strong></div>
-        <!-- 19 여부 --> <div><span>19</span><strong>X</strong></div>
+        <!-- 이름 --><div><span>이름</span><strong>비공개</strong></div>
+        <!-- 성별 --><div><span>성별</span><strong>비공개</strong></div>
+        <!-- 종족 --><div><span>종족</span><strong>비공개</strong></div>
+        <!-- 성격 --><div><span>성격</span><strong>불명</strong></div>
+        <!-- 말투 --><div><span>말투</span><strong>불명</strong></div>
+        <!-- 고유 --><div><span>특성</span><strong>불명</strong></div>
       </div>
     </article></div>
     </div><div class="tab-content" id="guard">
-      <div class="route-intro"><span class="route-mark">♛</span><div><h3>궁전 호위병 계열</h3><p>왕실과 제국을 수호하며 명예와 통솔력을 쌓아가는 전직 루트.</p></div></div>
+      <div class="route-intro"><span class="route-mark">♛</span><div><h3>궁전 호위병 계열</h3><p>왕실과 제국을 수호하며 명예와 통솔력을 쌓아가는 동료들.</p></div></div>
       <div class="npc-grid"><article class="npc-card">
       <div class="portrait-slot"><img src="https://pub-ea583730072d437db7db3801624b8b65.r2.dev/%EB%A0%88%EC%98%A4%EB%82%98%EB%A5%B4%20%ED%94%84%EB%A1%9C%ED%95%84.jpg" alt="레오나르 프로필">
       </div>
@@ -409,20 +410,18 @@
       </div>
     </article>
 <article class="npc-card">
-      <div class="portrait-slot"><img src="https://pub-ea583730072d437db7db3801624b8b65.r2.dev/%EC%8B%A4%EB%B9%84%EC%95%84%20%ED%94%84%EB%A1%9C%ED%95%84.jpg" alt="실비아 프로필">
-      </div>
+       <div class="portrait-slot"><span>🌿</span><small>행방불명E</small></div>
       <div class="npc-info">
-        <!-- 이름 --><div><span>이름</span><strong>실비아</strong></div>
-        <!-- 성별 --><div><span>성별</span><strong>여성</strong></div>
-        <!-- 종족 --><div><span>종족</span><strong>다크엘프</strong></div>
-        <!-- 성격 --><div><span>성격</span><strong>2w3 · I/S · 얀데레 · 어리숙</strong></div>
-        <!-- 말투 --><div><span>말투</span><strong>격식체 · 빠른 말 · 존댓말</strong></div>
-        <!-- 고유 --><div><span>특성</span><strong>시야제한 환경에서 생명체 움직임 감지 <br>숲 지형에서 DEX·AGI 보정.</strong></div>
-        <!-- 19 여부 --> <div><span>19</span><strong>O</strong></div>
+        <!-- 이름 --><div><span>이름</span><strong>비공개</strong></div>
+        <!-- 성별 --><div><span>성별</span><strong>비공개</strong></div>
+        <!-- 종족 --><div><span>종족</span><strong>비공개</strong></div>
+        <!-- 성격 --><div><span>성격</span><strong>불명</strong></div>
+        <!-- 말투 --><div><span>말투</span><strong>불명</strong></div>
+        <!-- 고유 --><div><span>특성</span><strong>불명</strong></div>
       </div>
     </article></div>
     </div><div class="tab-content" id="field">
-      <div class="route-intro"><span class="route-mark">🏕</span><div><h3>야전병 계열</h3><p>실전 경험과 적응력, 전술 지휘를 통해 성장하는 현실적인 전투 루트.</p></div></div>
+      <div class="route-intro"><span class="route-mark">🏕</span><div><h3>야전병 계열</h3><p>실전 경험과 적응력, 전술 지휘를 통해 성장하는 현실적인 동료들.</p></div></div>
       <div class="npc-grid"><article class="npc-card">
       <div class="portrait-slot"><img src="https://pub-ea583730072d437db7db3801624b8b65.r2.dev/%EA%B0%80%EB%A0%8C%20%ED%94%84%EB%A1%9C%ED%95%84.jpg" alt="가렌 프로필">
       </div>
@@ -437,16 +436,14 @@
       </div>
     </article>
 <article class="npc-card">
-      <div class="portrait-slot"><img src="https://pub-ea583730072d437db7db3801624b8b65.r2.dev/%EC%89%90%EB%8F%84%EC%9A%B0%20%ED%94%84%EB%A1%9C%ED%95%84.jpg" alt="쉐도우 프로필">
-      </div>
+      <div class="portrait-slot"><span>🐺</span><small>행방불명</small></div>
       <div class="npc-info">
-        <!-- 이름 --><div><span>이름</span><strong>쉐도우</strong></div>
-        <!-- 성별 --><div><span>성별</span><strong>남성</strong></div>
-        <!-- 직업 / 종족 --><div><span>직업 / 종족</span><strong>레인저 / 인간</strong></div>
-        <!-- 성격 --><div><span>성격</span><strong>7w8 · I/D · 수상함 · 능청 </strong></div>
-        <!-- 말투 --><div><span>말투</span><strong>능글 · 밀당 · 돌려말함</strong></div>
-        <!-- 고유 --><div><span>능력</span><strong>상대의 추적·탐지력 감소부여</strong></div>
-        <!-- 19 여부 --> <div><span>19</span><strong>X</strong></div>
+        <!-- 이름 --><div><span>이름</span><strong>비공개</strong></div>
+        <!-- 성별 --><div><span>성별</span><strong>비공개</strong></div>
+        <!-- 직업 / 종족 --><div><span>직업 / 종족</span><strong>비공개</strong></div>
+        <!-- 성격 --><div><span>성격</span><strong>불명</strong></div>
+        <!-- 말투 --><div><span>말투</span><strong>불명</strong></div>
+        <!-- 고유 --><div><span>능력</span><strong>불명</strong></div>
       </div>
     </article>
 <article class="npc-card">
@@ -476,7 +473,7 @@
       </div>
     </article></div>
     </div><div class="tab-content" id="barbarian">
-      <div class="route-intro"><span class="route-mark">🐾</span><div><h3>야만전사 계열</h3><p>야성, 부족 문화, 토템과 정령의 힘을 받아들이는 전직 루트.</p></div></div>
+      <div class="route-intro"><span class="route-mark">🐾</span><div><h3>야만전사 계열</h3><p>야성, 부족 문화, 토템과 정령의 힘으로 싸우는 동료.</p></div></div>
       <div class="npc-grid"><article class="npc-card">
       <div class="portrait-slot"><img src="https://pub-ea583730072d437db7db3801624b8b65.r2.dev/%EB%B8%8C%EB%9D%BD%20%ED%94%84%EB%A1%9C%ED%95%84.jpg" alt="브락 프로필">
       </div>
@@ -491,7 +488,7 @@
       </div>
     </article>
 <article class="npc-card">
-      <div class="portrait-slot"><span>🐺</span><small>PROFILE IMAGE</small></div>
+      <div class="portrait-slot"><span>🐺</span><small>도주</small></div>
       <div class="npc-info">
         <!-- 이름 --><div><span>이름</span><strong>토르가</strong></div>
         <!-- 성별 --><div><span>성별</span><strong>수컷</strong></div>
@@ -503,8 +500,7 @@
       </div>
     </article>
 <article class="npc-card">
-      <div class="portrait-slot"><img src="https://pub-ea583730072d437db7db3801624b8b65.r2.dev/%EC%9A%B0%EB%A3%A8%20%ED%94%84%EB%A1%9C%ED%95%84.jpg" alt="우루 프로필">
-      </div>
+      <div class="portrait-slot"><span>🌳</span><small>도주</small></div>
       <div class="npc-info">
         <!-- 이름 --><div><span>이름</span><strong>우루</strong></div>
         <!-- 성별 --><div><span>성별</span><strong>여성</strong></div>
@@ -516,8 +512,7 @@
       </div>
     </article>
 <article class="npc-card">
-      <div class="portrait-slot"><img src="https://pub-ea583730072d437db7db3801624b8b65.r2.dev/%EC%95%84%EB%82%98%ED%82%A4%20%ED%94%84%EB%A1%9C%ED%95%84.jpg" alt="아나키 프로필">
-      </div>
+      <div class="portrait-slot"><span>🌿</span><small>포획 실패E</small></div>
       <div class="npc-info">
         <!-- 이름 --><div><span>이름</span><strong>아나키</strong></div>
         <!-- 성별 --><div><span>성별</span><strong>여성</strong></div>
@@ -542,10 +537,9 @@
       </div>
     </article></div>
     </div><div class="tab-content" id="hybrid">
-      <div class="route-intro"><span class="route-mark">✦</span><div><h3>혼합 · 히든 계열</h3><p>둘 이상의 전직 계통, 특수 계약 혹은 영웅 계승으로만 만날 수 있는 희귀 인물들.</p></div></div>
+      <div class="route-intro"><span class="route-mark">✦</span><div><h3>혼합 · 히든 계열</h3><p>둘 이상의 전직 계통, 특수 계약 혹은 영웅 계승으로만 만날 수 있는 희귀한 동료들.</p></div></div>
       <div class="npc-grid"><article class="npc-card">
-      <div class="portrait-slot"><img src="https://pub-ea583730072d437db7db3801624b8b65.r2.dev/%EC%9A%B0%EB%A6%AC%EC%97%98%20%ED%94%84%EB%A1%9C%ED%95%84.jpg" alt="우리엘 프로필">
-      </div>
+     <div class="portrait-slot"><span>👼</span><small>포획 실패</small></div>
       <div class="npc-info">
         <!-- 이름 --><div><span>이름</span><strong>우리엘</strong></div>
         <!-- 성별 --><div><span>성별</span><strong>여성</strong></div>
@@ -557,8 +551,7 @@
       </div>
     </article>
 <article class="npc-card">
-      <div class="portrait-slot"><img src="https://pub-ea583730072d437db7db3801624b8b65.r2.dev/%EC%95%84%EC%9A%B0%EB%A0%90%EB%A6%AC%EC%98%A8%20%ED%94%84%EB%A1%9C%ED%95%84.jpg" alt="아우렐리온 프로필">
-      </div>
+       <div class="portrait-slot"><span>🐉</span><small>포획 실패</small></div>
       <div class="npc-info">
         <!-- 이름 --><div><span>이름</span><strong>아우렐리온</strong></div>
         <!-- 성별 --><div><span>성별</span><strong>여성</strong></div>
@@ -583,15 +576,14 @@
       </div>
     </article>
 <article class="npc-card">
-      <div class="portrait-slot"><img src="https://pub-ea583730072d437db7db3801624b8b65.r2.dev/%EB%B2%A8%EB%A6%AC%EC%95%8C%20%ED%94%84%EB%A1%9C%ED%95%84.jpg" alt="벨리알 프로필">
-      </div>
+      <div class="portrait-slot"><span>😈</span><small>행방불명E</small></div>
       <div class="npc-info">
-        <!-- 이름 --><div><span>이름</span><strong>벨리알</strong></div>
-        <!-- 성별 --><div><span>성별</span><strong>여성</strong></div>
-        <!-- 종족 --><div><span>종족</span><strong>악마</strong></div>
-        <!-- 성격 --><div><span>성격</span><strong>4w5 · C/D · 경멸 · 표독</strong></div>
-        <!-- 말투 --><div><span>말투</span><strong>사극체 · 교양있는 · 빈정</strong></div>
-        <!-- 고유 --><div><span>능력</span><strong>대상이 원하는 스탯 일시적 강화.</strong></div>
+        <!-- 이름 --><div><span>이름</span><strong>비공개</strong></div>
+        <!-- 성별 --><div><span>성별</span><strong>비공개</strong></div>
+        <!-- 종족 --><div><span>종족</span><strong>비공개</strong></div>
+        <!-- 성격 --><div><span>성격</span><strong>불명</strong></div>
+        <!-- 말투 --><div><span>말투</span><strong>불명</strong></div>
+        <!-- 고유 --><div><span>능력</span><strong>불명</strong></div>
         <!-- 19 여부 --> <div><span>19</span><strong>O</strong></div>
       </div>
     </article>
@@ -609,11 +601,10 @@
       </div>
     </article>
 <article class="npc-card">
-      <div class="portrait-slot"><img src="https://pub-ea583730072d437db7db3801624b8b65.r2.dev/%EB%A9%94%ED%83%80%ED%8A%B8%EB%A1%A0%20%ED%94%84%EB%A1%9C%ED%95%84.jpg" alt="메타트론 프로필">
-      </div>
+      <div class="portrait-slot"><span>👹</span><small>도주</small></div>
       <div class="npc-info">
         <!-- 이름 --><div><span>이름</span><strong>메타트론</strong></div>
-        <!-- 성별 --><div><span>성별</span><strong>여성</strong></div>
+        <!-- 성별 --><div><span>성별</span><strong>불명</strong></div>
         <!-- 종족 --><div><span>종족</span><strong>천사</strong></div>
         <!-- 성격 --><div><span>성격</span><strong>6w7 · I/S · 의존적 · 수다쟁이</strong></div>
         <!-- 말투 --><div><span>말투</span><strong>반말 · 담백함 · 돌직구</strong></div>
@@ -635,7 +626,7 @@
       </div>
     </article>
 <article class="npc-card">
-      <div class="portrait-slot"><span>🐕</span><small>PROFILE IMAGE</small></div>
+      <div class="portrait-slot"><span>🐕</span><small>파악 중</small></div>
       <div class="npc-info">
         <!-- 주석: 이름 --><div><span>이름</span><strong>공란</strong></div>
         <!-- 주석: 성별 --><div><span>성별</span><strong>불명</strong></div>
@@ -645,7 +636,7 @@
       </div>
     </article>
 <article class="npc-card">
-      <div class="portrait-slot"><span>🗿</span><small>PROFILE IMAGE</small></div>
+      <div class="portrait-slot"><span>🗿</span><small>파악 중</small></div>
       <div class="npc-info">
         <!-- 주석: 이름 --><div><span>이름</span><strong>공란</strong></div>
         <!-- 주석: 성별 --><div><span>성별</span><strong>불명</strong></div>
@@ -655,7 +646,7 @@
       </div>
     </article>
 <article class="npc-card">
-      <div class="portrait-slot"><span>⚒️</span><small>PROFILE IMAGE</small></div>
+      <div class="portrait-slot"><span>⚒️</span><small>파악 중</small></div>
       <div class="npc-info">
         <!-- 주석: 이름 --><div><span>이름</span><strong>공란</strong></div>
         <!-- 주석: 성별 --><div><span>성별</span><strong>불명</strong></div>
@@ -678,7 +669,7 @@
       </div>
     </article>
 <article class="npc-card">
-      <div class="portrait-slot"><span>🩸</span><small>PROFILE IMAGE</small></div>
+      <div class="portrait-slot"><span>🩸</span><small>파악 중</small></div>
       <div class="npc-info">
         <!-- 주석: 이름 --><div><span>이름</span><strong>공란</strong></div>
         <!-- 주석: 성별 --><div><span>성별</span><strong>불명</strong></div>
@@ -688,7 +679,7 @@
       </div>
     </article>
 <article class="npc-card">
-      <div class="portrait-slot"><span>🐲</span><small>PROFILE IMAGE</small></div>
+      <div class="portrait-slot"><span>🐲</span><small>파악 중</small></div>
       <div class="npc-info">
         <!-- 주석: 이름 --><div><span>이름</span><strong>공란</strong></div>
         <!-- 주석: 성별 --><div><span>성별</span><strong>불명</strong></div>
@@ -698,7 +689,7 @@
       </div>
     </article>
 <article class="npc-card">
-      <div class="portrait-slot"><span>☄️</span><small>PROFILE IMAGE</small></div>
+      <div class="portrait-slot"><span>☄️</span><small>파악 중</small></div>
       <div class="npc-info">
         <!-- 주석: 이름 --><div><span>이름</span><strong>공란</strong></div>
         <!-- 주석: 성별 --><div><span>성별</span><strong>불명</strong></div>
@@ -708,7 +699,7 @@
       </div>
     </article>
 <article class="npc-card">
-      <div class="portrait-slot"><span>✦</span><small>PROFILE IMAGE</small></div>
+      <div class="portrait-slot"><span>✦</span><small>파악 중</small></div>
       <div class="npc-info">
         <!-- 주석: 이름 --><div><span>이름</span><strong>공란</strong></div>
         <!-- 주석: 성별 --><div><span>성별</span><strong>불명</strong></div>
