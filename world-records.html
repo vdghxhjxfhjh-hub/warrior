@@ -243,9 +243,9 @@
     <article class="notice-card"><span class="notice-org">철혈 맹약단</span><h3>북부 수송대 전투원 모집</h3><p>적설 지대를 통과하는 군수품 수송. 몬스터 조우 가능성이 높음.</p><small>위험수당 별도</small></article>
     <article class="notice-card suspicious"><span class="notice-org">발신인 미상</span><h3>“붉은 달이 뜨는 밤, 문을 세 번 두드릴 것.”</h3><p>지원 자격과 보수는 기재되어 있지 않다. 종이에서 희미한 마력 반응이 느껴진다.</p><small>접촉 장소: 벨로스 항 7번 창고</small></article>
     <article class="notice-card classified" id="classifiedNotice">
-      <div class="classified-cover"><span>CLASSIFIED</span><h3>왕실 비인가 기밀 공고</h3><p>암호문을 입력해야 내용을 열람할 수 있습니다.</p>
+      <div class="classified-cover"><span>CLASSIFIED</span><h3>왕실 비인가 기밀 공고</h3><p>암호문을 복사붙여 넣기 하시는 것을 추천</p>
       <div class="classified-unlock"><input id="classifiedCode" type="password" placeholder="암호문 입력"><button id="unlockClassified" type="button">열람</button></div>
-      <small id="classifiedStatus">힌트: 영웅의 시작점</small></div>
+      <small id="classifiedStatus">힌트: 상태창</small></div>
       <div class="classified-body"><span class="notice-org">████████</span><h3>영웅들의 묘역 잠입 인원 모집</h3><p>공식 기록에 존재하지 않는 의뢰다. 묘역 내부의 검은 결정체를 회수하고 누구에게도 발설하지 말 것.</p><small>보수: 2,500G + 미공개 유물</small></div>
     </article>
   </div>
@@ -317,6 +317,7 @@
     <li>CHA 10 미만: 정가 / CHA 10~19: -5% / CHA 20 이상: -10~15% 협상 가능</li>
     <li>희귀 등급 이상 장비는 일반 상점 판매 불가. 경매·특수 상인·던전 드롭 한정.</li>
     <li>장비 판매 시 구매가의 40% 환급.</li>
+    <li>실제 채팅과는 다르게 나올 수 있습니다.</li>
   </ul></div>
 </div>
 
@@ -526,7 +527,7 @@ function renderR(){if(!rBoard)return;rBoard.innerHTML=`<section class="detail-bo
 document.getElementById('refreshRumors')?.addEventListener('click',renderR);renderR();
 
 // Classified
-document.getElementById('unlockClassified')?.addEventListener('click',()=>{let code=(document.getElementById('classifiedCode').value||'').trim().toLowerCase(),s=document.getElementById('classifiedStatus');if(code==='견습전사'){document.getElementById('classifiedNotice').classList.add('unlocked');s.textContent='기밀 공고 열람 승인';}else{s.textContent='암호가 일치하지 않습니다.';}});
+document.getElementById('unlockClassified')?.addEventListener('click',()=>{let code=(document.getElementById('classifiedCode').value||'').trim().toLowerCase(),s=document.getElementById('classifiedStatus');if(code==='깡통'){document.getElementById('classifiedNotice').classList.add('unlocked');s.textContent='기밀 공고 열람 승인';}else{s.textContent='암호가 일치하지 않습니다.';}});
 
   </script>
 </body>
